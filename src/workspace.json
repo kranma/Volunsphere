@@ -1,0 +1,1415 @@
+{
+  "configuration" : { },
+  "description" : "Description",
+  "documentation" : { },
+  "id" : 1,
+  "lastModifiedDate" : "2026-09-08T22:50:27Z",
+  "model" : {
+    "people" : [ {
+      "description" : "Searches for volunteering opportunities and applies for them",
+      "id" : "1",
+      "name" : "Volunteer",
+      "properties" : {
+        "structurizr.dsl.identifier" : "volunteer"
+      },
+      "relationships" : [ {
+        "description" : "Searches and applies for opportunities",
+        "destinationId" : "7",
+        "id" : "52",
+        "sourceId" : "1",
+        "tags" : "Relationship",
+        "technology" : "HTTPS"
+      }, {
+        "description" : "Searches and applies for opportunities",
+        "destinationId" : "6",
+        "id" : "53",
+        "linkedRelationshipId" : "52",
+        "sourceId" : "1",
+        "technology" : "HTTPS"
+      }, {
+        "description" : "Stores identity and certificates",
+        "destinationId" : "4",
+        "id" : "54",
+        "sourceId" : "1",
+        "tags" : "Relationship"
+      }, {
+        "description" : "Authenticates and authorizes",
+        "destinationId" : "10",
+        "id" : "55",
+        "sourceId" : "1",
+        "tags" : "Relationship",
+        "technology" : "HTTPS"
+      }, {
+        "description" : "Searches and requests opportunities",
+        "destinationId" : "8",
+        "id" : "56",
+        "sourceId" : "1",
+        "tags" : "Relationship",
+        "technology" : "HTTPS"
+      }, {
+        "description" : "Chats with in community",
+        "destinationId" : "9",
+        "id" : "57",
+        "sourceId" : "1",
+        "tags" : "Relationship",
+        "technology" : "HTTPS"
+      } ],
+      "tags" : "Element,Person"
+    } ],
+    "softwareSystems" : [ {
+      "description" : "Ministry accessing reports, statistics and governance functions",
+      "documentation" : { },
+      "id" : "2",
+      "name" : "BMSGPK",
+      "properties" : {
+        "structurizr.dsl.identifier" : "ministry"
+      },
+      "relationships" : [ {
+        "description" : "Performs and views reports",
+        "destinationId" : "11",
+        "id" : "66",
+        "sourceId" : "2",
+        "tags" : "Relationship"
+      }, {
+        "description" : "Performs and views reports",
+        "destinationId" : "7",
+        "id" : "67",
+        "linkedRelationshipId" : "66",
+        "sourceId" : "2"
+      }, {
+        "description" : "Performs and views reports",
+        "destinationId" : "6",
+        "id" : "68",
+        "linkedRelationshipId" : "66",
+        "sourceId" : "2"
+      } ],
+      "tags" : "Element,Software System"
+    }, {
+      "description" : "Trust framework for participant onboarding and credential verification",
+      "documentation" : { },
+      "id" : "3",
+      "name" : "Gaia-X Trust Framework",
+      "properties" : {
+        "structurizr.dsl.identifier" : "gaiax"
+      },
+      "tags" : "Element,Software System,outofscope"
+    }, {
+      "description" : "Wallet infrastructure for identities and credentials",
+      "documentation" : { },
+      "id" : "4",
+      "name" : "EUDI Wallet Ecosystem",
+      "properties" : {
+        "structurizr.dsl.identifier" : "eudi"
+      },
+      "tags" : "Element,Software System,outofscope"
+    }, {
+      "description" : "Competence and skill vocabulary",
+      "documentation" : { },
+      "id" : "5",
+      "name" : "ESCO / Competence Framework",
+      "properties" : {
+        "structurizr.dsl.identifier" : "esco"
+      },
+      "tags" : "Element,Software System,outofscope"
+    }, {
+      "containers" : [ {
+        "components" : [ {
+          "description" : "Search, discovery and requesting of volunteering opportunities",
+          "documentation" : { },
+          "id" : "8",
+          "name" : "Marketplace Service",
+          "properties" : {
+            "structurizr.dsl.identifier" : "marketplace"
+          },
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Messaging and community functions",
+          "documentation" : { },
+          "id" : "9",
+          "name" : "Community Service",
+          "properties" : {
+            "structurizr.dsl.identifier" : "community"
+          },
+          "tags" : "Element,Component"
+        }, {
+          "description" : "User authentication and authorization",
+          "documentation" : { },
+          "id" : "10",
+          "name" : "Sign-In Service",
+          "properties" : {
+            "structurizr.dsl.identifier" : "signin"
+          },
+          "relationships" : [ {
+            "description" : "Sends and stores registration data of volunteers",
+            "destinationId" : "12",
+            "id" : "61",
+            "sourceId" : "10",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Writes authentication events",
+            "destinationId" : "19",
+            "id" : "90",
+            "sourceId" : "10",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Aggregates and visualizes data for governance and statistics",
+          "documentation" : { },
+          "id" : "11",
+          "name" : "Reporting Service",
+          "properties" : {
+            "structurizr.dsl.identifier" : "reporting"
+          },
+          "tags" : "Element,Component"
+        } ],
+        "description" : "Marketplace and user portal",
+        "documentation" : { },
+        "id" : "7",
+        "name" : "Web Frontend",
+        "properties" : {
+          "structurizr.dsl.identifier" : "frontend"
+        },
+        "relationships" : [ {
+          "description" : "Sends and stores registration data of volunteers",
+          "destinationId" : "12",
+          "id" : "62",
+          "linkedRelationshipId" : "61",
+          "sourceId" : "7"
+        }, {
+          "description" : "Writes authentication events",
+          "destinationId" : "19",
+          "id" : "91",
+          "linkedRelationshipId" : "90",
+          "sourceId" : "7"
+        } ],
+        "tags" : "Element,Container"
+      }, {
+        "description" : "Stores user data, opportunities and registrations",
+        "documentation" : { },
+        "id" : "12",
+        "name" : "Database",
+        "properties" : {
+          "structurizr.dsl.identifier" : "database"
+        },
+        "tags" : "Element,Container"
+      }, {
+        "components" : [ {
+          "description" : "Authentication and credential verification",
+          "documentation" : { },
+          "id" : "14",
+          "name" : "Identity Service",
+          "properties" : {
+            "structurizr.dsl.identifier" : "identity"
+          },
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Skill and certificate matching based on ESCO",
+          "documentation" : { },
+          "id" : "15",
+          "name" : "Matching Service",
+          "properties" : {
+            "structurizr.dsl.identifier" : "matching"
+          },
+          "relationships" : [ {
+            "description" : "Uses competence taxonomy",
+            "destinationId" : "5",
+            "id" : "63",
+            "sourceId" : "15",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        } ],
+        "description" : "Service and API coordinationand for the frontend",
+        "documentation" : { },
+        "id" : "13",
+        "name" : "Backend Service",
+        "properties" : {
+          "structurizr.dsl.identifier" : "backend"
+        },
+        "relationships" : [ {
+          "description" : "Connects to federated catalog endpoint",
+          "destinationId" : "16",
+          "id" : "58",
+          "sourceId" : "13",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Prepares and provides metadata for opportunities",
+          "destinationId" : "8",
+          "id" : "59",
+          "sourceId" : "13",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Prepares and provides metadata for opportunities",
+          "destinationId" : "7",
+          "id" : "60",
+          "linkedRelationshipId" : "59",
+          "sourceId" : "13"
+        }, {
+          "description" : "Uses competence taxonomy",
+          "destinationId" : "5",
+          "id" : "64",
+          "linkedRelationshipId" : "63",
+          "sourceId" : "13"
+        }, {
+          "description" : "Writes audit events",
+          "destinationId" : "19",
+          "id" : "89",
+          "sourceId" : "13",
+          "tags" : "Relationship"
+        } ],
+        "tags" : "Element,Container"
+      }, {
+        "components" : [ {
+          "description" : "Manages data exchange and policy enforcement",
+          "documentation" : { },
+          "id" : "17",
+          "name" : "Control Plane",
+          "properties" : {
+            "structurizr.dsl.identifier" : "controlplane"
+          },
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Handles data transfer and transformation",
+          "documentation" : { },
+          "id" : "18",
+          "name" : "Data Plane",
+          "properties" : {
+            "structurizr.dsl.identifier" : "dataplane"
+          },
+          "tags" : "Element,Component"
+        } ],
+        "description" : "Connector for identity, policy and metadata exchange, crawls metadata from participating organizations",
+        "documentation" : { },
+        "id" : "16",
+        "name" : "EDC Connector",
+        "properties" : {
+          "structurizr.dsl.identifier" : "connector"
+        },
+        "relationships" : [ {
+          "description" : "Crawls metadata",
+          "destinationId" : "21",
+          "id" : "69",
+          "sourceId" : "16",
+          "tags" : "Relationship",
+          "technology" : "EDC"
+        }, {
+          "description" : "Crawls metadata",
+          "destinationId" : "20",
+          "id" : "70",
+          "linkedRelationshipId" : "69",
+          "sourceId" : "16",
+          "technology" : "EDC"
+        }, {
+          "description" : "Crawls metadata",
+          "destinationId" : "37",
+          "id" : "73",
+          "sourceId" : "16",
+          "tags" : "Relationship",
+          "technology" : "EDC"
+        }, {
+          "description" : "Crawls metadata",
+          "destinationId" : "36",
+          "id" : "74",
+          "linkedRelationshipId" : "73",
+          "sourceId" : "16",
+          "technology" : "EDC"
+        } ],
+        "tags" : "Element,Container"
+      }, {
+        "description" : "Stores audit and governance events",
+        "documentation" : { },
+        "id" : "19",
+        "name" : "Audit Log",
+        "properties" : {
+          "structurizr.dsl.identifier" : "audit"
+        },
+        "tags" : "Element,Container"
+      } ],
+      "documentation" : { },
+      "id" : "6",
+      "name" : "VolunSphere Platform",
+      "properties" : {
+        "structurizr.dsl.identifier" : "volunsphere"
+      },
+      "relationships" : [ {
+        "description" : "Uses competence taxonomy",
+        "destinationId" : "5",
+        "id" : "65",
+        "linkedRelationshipId" : "63",
+        "sourceId" : "6"
+      }, {
+        "description" : "Crawls metadata",
+        "destinationId" : "21",
+        "id" : "71",
+        "linkedRelationshipId" : "69",
+        "sourceId" : "6",
+        "technology" : "EDC"
+      }, {
+        "description" : "Crawls metadata",
+        "destinationId" : "20",
+        "id" : "72",
+        "linkedRelationshipId" : "69",
+        "sourceId" : "6",
+        "technology" : "EDC"
+      }, {
+        "description" : "Crawls metadata",
+        "destinationId" : "37",
+        "id" : "75",
+        "linkedRelationshipId" : "73",
+        "sourceId" : "6",
+        "technology" : "EDC"
+      }, {
+        "description" : "Crawls metadata",
+        "destinationId" : "36",
+        "id" : "76",
+        "linkedRelationshipId" : "73",
+        "sourceId" : "6",
+        "technology" : "EDC"
+      } ],
+      "tags" : "Element,Software System"
+    }, {
+      "containers" : [ {
+        "components" : [ {
+          "description" : "Manages data exchange and policy enforcement",
+          "documentation" : { },
+          "id" : "22",
+          "name" : "Control Plane",
+          "properties" : {
+            "structurizr.dsl.identifier" : "controlplane1"
+          },
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Handles data transfer and transformation",
+          "documentation" : { },
+          "id" : "23",
+          "name" : "Data Plane",
+          "properties" : {
+            "structurizr.dsl.identifier" : "dataplane1"
+          },
+          "tags" : "Element,Component"
+        } ],
+        "description" : "Connector for identity, policy and metadata exchange",
+        "documentation" : { },
+        "id" : "21",
+        "name" : "EDC Connector",
+        "properties" : {
+          "structurizr.dsl.identifier" : "connector1"
+        },
+        "relationships" : [ {
+          "description" : "Accesses opportunities",
+          "destinationId" : "28",
+          "id" : "77",
+          "sourceId" : "21",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Access organisational credentials",
+          "destinationId" : "29",
+          "id" : "79",
+          "sourceId" : "21",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Proves organisational identity",
+          "destinationId" : "3",
+          "id" : "81",
+          "sourceId" : "21",
+          "tags" : "Relationship"
+        } ],
+        "tags" : "Element,Container"
+      }, {
+        "components" : [ {
+          "description" : "Manages and publishes volunteering opportunities",
+          "documentation" : { },
+          "id" : "25",
+          "name" : "Opportunity Catalog",
+          "properties" : {
+            "structurizr.dsl.identifier" : "catalog1"
+          },
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Aggregates and visualizes data for governance and statistics",
+          "documentation" : { },
+          "id" : "26",
+          "name" : "Reporting Service",
+          "properties" : {
+            "structurizr.dsl.identifier" : "reporting1"
+          },
+          "tags" : "Element,Component"
+        } ],
+        "description" : "Management UI for volunteering opportunities",
+        "documentation" : { },
+        "id" : "24",
+        "name" : "Organization Frontend",
+        "properties" : {
+          "structurizr.dsl.identifier" : "frontend1"
+        },
+        "tags" : "Element,Container"
+      }, {
+        "description" : "Prepares and manages volunteering opportunities and matches for the frontend",
+        "documentation" : { },
+        "id" : "27",
+        "name" : "Opportunity Management Service",
+        "properties" : {
+          "structurizr.dsl.identifier" : "backend1"
+        },
+        "tags" : "Element,Container"
+      }, {
+        "description" : "Source of Truth for opportunities and registrations",
+        "documentation" : { },
+        "id" : "28",
+        "name" : "Local Database",
+        "properties" : {
+          "structurizr.dsl.identifier" : "database1"
+        },
+        "relationships" : [ {
+          "description" : "Transforms local data",
+          "destinationId" : "32",
+          "id" : "85",
+          "sourceId" : "28",
+          "tags" : "Relationship"
+        } ],
+        "tags" : "Element,Container"
+      }, {
+        "components" : [ {
+          "documentation" : { },
+          "id" : "30",
+          "name" : "Verifiable Credentials",
+          "properties" : {
+            "structurizr.dsl.identifier" : "vc1"
+          },
+          "tags" : "Element,Component"
+        }, {
+          "documentation" : { },
+          "id" : "31",
+          "name" : "DID Keypair",
+          "properties" : {
+            "structurizr.dsl.identifier" : "did1"
+          },
+          "tags" : "Element,Component"
+        } ],
+        "documentation" : { },
+        "id" : "29",
+        "name" : "Wallet",
+        "properties" : {
+          "structurizr.dsl.identifier" : "wallet1"
+        },
+        "tags" : "Element,Container"
+      }, {
+        "components" : [ {
+          "documentation" : { },
+          "id" : "33",
+          "name" : "ESCO Mapping",
+          "properties" : {
+            "structurizr.dsl.identifier" : "esco_map1"
+          },
+          "tags" : "Element,Component"
+        }, {
+          "documentation" : { },
+          "id" : "34",
+          "name" : "Ontology Mapping",
+          "properties" : {
+            "structurizr.dsl.identifier" : "ontology_map1"
+          },
+          "tags" : "Element,Component"
+        }, {
+          "documentation" : { },
+          "id" : "35",
+          "name" : "SHACL Validation",
+          "properties" : {
+            "structurizr.dsl.identifier" : "shacl1"
+          },
+          "tags" : "Element,Component"
+        } ],
+        "documentation" : { },
+        "id" : "32",
+        "name" : "Semantic Layer",
+        "properties" : {
+          "structurizr.dsl.identifier" : "semantic1"
+        },
+        "relationships" : [ {
+          "description" : "Provides JSON-LD assets",
+          "destinationId" : "21",
+          "id" : "87",
+          "sourceId" : "32",
+          "tags" : "Relationship"
+        } ],
+        "tags" : "Element,Container"
+      } ],
+      "documentation" : { },
+      "id" : "20",
+      "name" : "Participating Organization A",
+      "properties" : {
+        "structurizr.dsl.identifier" : "org1"
+      },
+      "relationships" : [ {
+        "description" : "Proves organisational identity",
+        "destinationId" : "3",
+        "id" : "82",
+        "linkedRelationshipId" : "81",
+        "sourceId" : "20"
+      } ],
+      "tags" : "Element,Software System"
+    }, {
+      "containers" : [ {
+        "components" : [ {
+          "description" : "Manages data exchange and policy enforcement",
+          "documentation" : { },
+          "id" : "38",
+          "name" : "Control Plane",
+          "properties" : {
+            "structurizr.dsl.identifier" : "controlplane2"
+          },
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Handles data transfer and transformation",
+          "documentation" : { },
+          "id" : "39",
+          "name" : "Data Plane",
+          "properties" : {
+            "structurizr.dsl.identifier" : "dataplane2"
+          },
+          "tags" : "Element,Component"
+        } ],
+        "description" : "Connector for identity, policy and metadata exchange",
+        "documentation" : { },
+        "id" : "37",
+        "name" : "EDC Connector",
+        "properties" : {
+          "structurizr.dsl.identifier" : "connector2"
+        },
+        "relationships" : [ {
+          "description" : "Accesses opportunities",
+          "destinationId" : "44",
+          "id" : "78",
+          "sourceId" : "37",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Access organisational credentials",
+          "destinationId" : "45",
+          "id" : "80",
+          "sourceId" : "37",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Proves organisational identity",
+          "destinationId" : "3",
+          "id" : "83",
+          "sourceId" : "37",
+          "tags" : "Relationship"
+        } ],
+        "tags" : "Element,Container"
+      }, {
+        "components" : [ {
+          "description" : "Manages and publishes volunteering opportunities",
+          "documentation" : { },
+          "id" : "41",
+          "name" : "Opportunity Catalog",
+          "properties" : {
+            "structurizr.dsl.identifier" : "catalog2"
+          },
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Aggregates and visualizes data for governance and statistics",
+          "documentation" : { },
+          "id" : "42",
+          "name" : "Reporting Service",
+          "properties" : {
+            "structurizr.dsl.identifier" : "reporting2"
+          },
+          "tags" : "Element,Component"
+        } ],
+        "description" : "Management UI for volunteering opportunities",
+        "documentation" : { },
+        "id" : "40",
+        "name" : "Organization Frontend",
+        "properties" : {
+          "structurizr.dsl.identifier" : "frontend2"
+        },
+        "tags" : "Element,Container"
+      }, {
+        "description" : "Prepares and manages volunteering opportunities and matches for the frontend",
+        "documentation" : { },
+        "id" : "43",
+        "name" : "Opportunity Management Service",
+        "properties" : {
+          "structurizr.dsl.identifier" : "backend2"
+        },
+        "tags" : "Element,Container"
+      }, {
+        "description" : "Source of Truth for opportunities and registrations",
+        "documentation" : { },
+        "id" : "44",
+        "name" : "Local Database",
+        "properties" : {
+          "structurizr.dsl.identifier" : "database2"
+        },
+        "relationships" : [ {
+          "description" : "Transforms local data",
+          "destinationId" : "48",
+          "id" : "86",
+          "sourceId" : "44",
+          "tags" : "Relationship"
+        } ],
+        "tags" : "Element,Container"
+      }, {
+        "components" : [ {
+          "documentation" : { },
+          "id" : "46",
+          "name" : "Verifiable Credentials",
+          "properties" : {
+            "structurizr.dsl.identifier" : "vc2"
+          },
+          "tags" : "Element,Component"
+        }, {
+          "documentation" : { },
+          "id" : "47",
+          "name" : "DID Keypair",
+          "properties" : {
+            "structurizr.dsl.identifier" : "did2"
+          },
+          "tags" : "Element,Component"
+        } ],
+        "documentation" : { },
+        "id" : "45",
+        "name" : "Wallet",
+        "properties" : {
+          "structurizr.dsl.identifier" : "wallet2"
+        },
+        "tags" : "Element,Container"
+      }, {
+        "components" : [ {
+          "documentation" : { },
+          "id" : "49",
+          "name" : "ESCO Mapping",
+          "properties" : {
+            "structurizr.dsl.identifier" : "esco_map2"
+          },
+          "tags" : "Element,Component"
+        }, {
+          "documentation" : { },
+          "id" : "50",
+          "name" : "Ontology Mapping",
+          "properties" : {
+            "structurizr.dsl.identifier" : "ontology_map2"
+          },
+          "tags" : "Element,Component"
+        }, {
+          "documentation" : { },
+          "id" : "51",
+          "name" : "SHACL Validation",
+          "properties" : {
+            "structurizr.dsl.identifier" : "shacl2"
+          },
+          "tags" : "Element,Component"
+        } ],
+        "documentation" : { },
+        "id" : "48",
+        "name" : "Semantic Layer",
+        "properties" : {
+          "structurizr.dsl.identifier" : "semantic2"
+        },
+        "relationships" : [ {
+          "description" : "Provides JSON-LD assets",
+          "destinationId" : "37",
+          "id" : "88",
+          "sourceId" : "48",
+          "tags" : "Relationship"
+        } ],
+        "tags" : "Element,Container"
+      } ],
+      "documentation" : { },
+      "id" : "36",
+      "name" : "Participating Organization B",
+      "properties" : {
+        "structurizr.dsl.identifier" : "org2"
+      },
+      "relationships" : [ {
+        "description" : "Proves organisational identity",
+        "destinationId" : "3",
+        "id" : "84",
+        "linkedRelationshipId" : "83",
+        "sourceId" : "36"
+      } ],
+      "tags" : "Element,Software System"
+    } ]
+  },
+  "name" : "VolunSphere",
+  "properties" : {
+    "structurizr.inspection.error" : "127",
+    "structurizr.dsl" : "d29ya3NwYWNlICJWb2x1blNwaGVyZSIgewoKICAgIG1vZGVsIHsKCiAgICAgICAgdm9sdW50ZWVyID0gcGVyc29uICJWb2x1bnRlZXIiIHsKICAgICAgICAgICAgZGVzY3JpcHRpb24gIlNlYXJjaGVzIGZvciB2b2x1bnRlZXJpbmcgb3Bwb3J0dW5pdGllcyBhbmQgYXBwbGllcyBmb3IgdGhlbSIKICAgICAgICB9CgogICAgICAgIG1pbmlzdHJ5ID0gc29mdHdhcmVTeXN0ZW0gIkJNU0dQSyIgewogICAgICAgICAgICBkZXNjcmlwdGlvbiAiTWluaXN0cnkgYWNjZXNzaW5nIHJlcG9ydHMsIHN0YXRpc3RpY3MgYW5kIGdvdmVybmFuY2UgZnVuY3Rpb25zIgogICAgICAgIH0KCiAgICAgICAgZ2FpYXggPSBzb2Z0d2FyZVN5c3RlbSAiR2FpYS1YIFRydXN0IEZyYW1ld29yayIgewogICAgICAgICAgICBkZXNjcmlwdGlvbiAiVHJ1c3QgZnJhbWV3b3JrIGZvciBwYXJ0aWNpcGFudCBvbmJvYXJkaW5nIGFuZCBjcmVkZW50aWFsIHZlcmlmaWNhdGlvbiIKICAgICAgICAgICAgdGFncyAib3V0b2ZzY29wZSIKICAgICAgICB9CgogICAgICAgIGV1ZGkgPSBzb2Z0d2FyZVN5c3RlbSAiRVVESSBXYWxsZXQgRWNvc3lzdGVtIiB7CiAgICAgICAgICAgIGRlc2NyaXB0aW9uICJXYWxsZXQgaW5mcmFzdHJ1Y3R1cmUgZm9yIGlkZW50aXRpZXMgYW5kIGNyZWRlbnRpYWxzIgogICAgICAgICAgICB0YWdzICJvdXRvZnNjb3BlIgogICAgICAgIH0KCiAgICAgICAgZXNjbyA9IHNvZnR3YXJlU3lzdGVtICJFU0NPIC8gQ29tcGV0ZW5jZSBGcmFtZXdvcmsiIHsKICAgICAgICAgICAgZGVzY3JpcHRpb24gIkNvbXBldGVuY2UgYW5kIHNraWxsIHZvY2FidWxhcnkiCiAgICAgICAgICAgIHRhZ3MgIm91dG9mc2NvcGUiCiAgICAgICAgfQoKICAgICAgICB2b2x1bnNwaGVyZSA9IHNvZnR3YXJlU3lzdGVtICJWb2x1blNwaGVyZSBQbGF0Zm9ybSIgewoKICAgICAgICAgICAgZnJvbnRlbmQgPSBjb250YWluZXIgIldlYiBGcm9udGVuZCIgewogICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gIk1hcmtldHBsYWNlIGFuZCB1c2VyIHBvcnRhbCIKCiAgICAgICAgICAgICAgICBtYXJrZXRwbGFjZSA9IGNvbXBvbmVudCAiTWFya2V0cGxhY2UgU2VydmljZSIgewogICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gIlNlYXJjaCwgZGlzY292ZXJ5IGFuZCByZXF1ZXN0aW5nIG9mIHZvbHVudGVlcmluZyBvcHBvcnR1bml0aWVzIgogICAgICAgICAgICB9CgogICAgICAgICAgICAgICAgY29tbXVuaXR5ID0gY29tcG9uZW50ICJDb21tdW5pdHkgU2VydmljZSIgewogICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gIk1lc3NhZ2luZyBhbmQgY29tbXVuaXR5IGZ1bmN0aW9ucyIKICAgICAgICAgICAgfQoKICAgICAgICAgICAgICAgIHNpZ25pbiA9IGNvbXBvbmVudCAiU2lnbi1JbiBTZXJ2aWNlIiB7CiAgICAgICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gIlVzZXIgYXV0aGVudGljYXRpb24gYW5kIGF1dGhvcml6YXRpb24iCiAgICAgICAgICAgICAgICB9CgogICAgICAgICAgICAgICAgcmVwb3J0aW5nID0gY29tcG9uZW50ICJSZXBvcnRpbmcgU2VydmljZSIgewogICAgICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uICJBZ2dyZWdhdGVzIGFuZCB2aXN1YWxpemVzIGRhdGEgZm9yIGdvdmVybmFuY2UgYW5kIHN0YXRpc3RpY3MiCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0KCiAgICAgICAgICAgIGRhdGFiYXNlID0gY29udGFpbmVyICJEYXRhYmFzZSIgewogICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gIlN0b3JlcyB1c2VyIGRhdGEsIG9wcG9ydHVuaXRpZXMgYW5kIHJlZ2lzdHJhdGlvbnMiCiAgICAgICAgICAgIH0KICAgICAgICAgICAgYmFja2VuZCA9IGNvbnRhaW5lciAiQmFja2VuZCBTZXJ2aWNlIiB7CiAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAiU2VydmljZSBhbmQgQVBJIGNvb3JkaW5hdGlvbmFuZCBmb3IgdGhlIGZyb250ZW5kIgoKICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgaWRlbnRpdHkgPSBjb21wb25lbnQgIklkZW50aXR5IFNlcnZpY2UiIHsKICAgICAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAiQXV0aGVudGljYXRpb24gYW5kIGNyZWRlbnRpYWwgdmVyaWZpY2F0aW9uIgogICAgICAgICAgICAgICAgfQoKICAgICAgICAgICAgICAgIG1hdGNoaW5nID0gY29tcG9uZW50ICJNYXRjaGluZyBTZXJ2aWNlIiB7CiAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAiU2tpbGwgYW5kIGNlcnRpZmljYXRlIG1hdGNoaW5nIGJhc2VkIG9uIEVTQ08iCiAgICAgICAgICAgIH0KICAgICAgICAgICAgfQoKCiAgICAgICAgICAgIGNvbm5lY3RvciA9IGNvbnRhaW5lciAiRURDIENvbm5lY3RvciIgewogICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gIkNvbm5lY3RvciBmb3IgaWRlbnRpdHksIHBvbGljeSBhbmQgbWV0YWRhdGEgZXhjaGFuZ2UsIGNyYXdscyBtZXRhZGF0YSBmcm9tIHBhcnRpY2lwYXRpbmcgb3JnYW5pemF0aW9ucyIKCiAgICAgICAgICAgICAgICBjb250cm9scGxhbmUgPSBjb21wb25lbnQgIkNvbnRyb2wgUGxhbmUiIHsKICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uICJNYW5hZ2VzIGRhdGEgZXhjaGFuZ2UgYW5kIHBvbGljeSBlbmZvcmNlbWVudCIKICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgZGF0YXBsYW5lID0gY29tcG9uZW50ICJEYXRhIFBsYW5lIiB7CiAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAiSGFuZGxlcyBkYXRhIHRyYW5zZmVyIGFuZCB0cmFuc2Zvcm1hdGlvbiIKICAgICAgICAgICAgfQogICAgICAgICAgICB9CgoKCiAgICAgICAgICAgIGF1ZGl0ID0gY29udGFpbmVyICJBdWRpdCBMb2ciIHsKICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uICJTdG9yZXMgYXVkaXQgYW5kIGdvdmVybmFuY2UgZXZlbnRzIgogICAgICAgICAgICB9CiAgICAgICAgfQoKICAgICAgICBvcmcxID0gc29mdHdhcmVTeXN0ZW0gIlBhcnRpY2lwYXRpbmcgT3JnYW5pemF0aW9uIEEiIHsKCgogICAgICAgICAgICAKICAgICAgICAgICAgY29ubmVjdG9yMSA9IGNvbnRhaW5lciAiRURDIENvbm5lY3RvciIgewogICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gIkNvbm5lY3RvciBmb3IgaWRlbnRpdHksIHBvbGljeSBhbmQgbWV0YWRhdGEgZXhjaGFuZ2UiCgogICAgICAgICAgICAgICAgY29udHJvbHBsYW5lMSA9IGNvbXBvbmVudCAiQ29udHJvbCBQbGFuZSIgewogICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gIk1hbmFnZXMgZGF0YSBleGNoYW5nZSBhbmQgcG9saWN5IGVuZm9yY2VtZW50IgogICAgICAgICAgICB9CiAgICAgICAgICAgICAgICBkYXRhcGxhbmUxID0gY29tcG9uZW50ICJEYXRhIFBsYW5lIiB7CiAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAiSGFuZGxlcyBkYXRhIHRyYW5zZmVyIGFuZCB0cmFuc2Zvcm1hdGlvbiIKICAgICAgICAgICAgfQogICAgICAgICAgICB9CgogICAgICAgICAgICBmcm9udGVuZDEgPSBjb250YWluZXIgIk9yZ2FuaXphdGlvbiBGcm9udGVuZCIgewogICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gIk1hbmFnZW1lbnQgVUkgZm9yIHZvbHVudGVlcmluZyBvcHBvcnR1bml0aWVzIgoKICAgICAgICAgICAgICAgIGNhdGFsb2cxID0gY29tcG9uZW50ICJPcHBvcnR1bml0eSBDYXRhbG9nIiB7CiAgICAgICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gIk1hbmFnZXMgYW5kIHB1Ymxpc2hlcyB2b2x1bnRlZXJpbmcgb3Bwb3J0dW5pdGllcyIKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgIAoKCiAgICAgICAgICAgICAgICByZXBvcnRpbmcxID0gY29tcG9uZW50ICJSZXBvcnRpbmcgU2VydmljZSIgewogICAgICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uICJBZ2dyZWdhdGVzIGFuZCB2aXN1YWxpemVzIGRhdGEgZm9yIGdvdmVybmFuY2UgYW5kIHN0YXRpc3RpY3MiCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIAogICAgICAgICAgICAKICAgICAgICAgICAgfQoKICAgICAgICAgICAgYmFja2VuZDEgPSBjb250YWluZXIgIk9wcG9ydHVuaXR5IE1hbmFnZW1lbnQgU2VydmljZSIgewogICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gIlByZXBhcmVzIGFuZCBtYW5hZ2VzIHZvbHVudGVlcmluZyBvcHBvcnR1bml0aWVzIGFuZCBtYXRjaGVzIGZvciB0aGUgZnJvbnRlbmQiCiAgICAgICAgICAgIH0KCiAgICAgICAgICAgIGRhdGFiYXNlMSA9IGNvbnRhaW5lciAiTG9jYWwgRGF0YWJhc2UiIHsKICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uICJTb3VyY2Ugb2YgVHJ1dGggZm9yIG9wcG9ydHVuaXRpZXMgYW5kIHJlZ2lzdHJhdGlvbnMiCiAgICAgICAgICAgIH0KCiAgICAgICAgICAgIHdhbGxldDEgPSBjb250YWluZXIgIldhbGxldCIgewoKICAgICAgICAgICAgICAgIHZjMSA9IGNvbXBvbmVudCAiVmVyaWZpYWJsZSBDcmVkZW50aWFscyIKCiAgICAgICAgICAgICAgICBkaWQxID0gY29tcG9uZW50ICJESUQgS2V5cGFpciIKICAgICAgICAgICAgfQoKICAgICAgICAgICAgc2VtYW50aWMxID0gY29udGFpbmVyICJTZW1hbnRpYyBMYXllciIgewoKICAgICAgICAgICAgICAgIGVzY29fbWFwMSA9IGNvbXBvbmVudCAiRVNDTyBNYXBwaW5nIgoKICAgICAgICAgICAgICAgIG9udG9sb2d5X21hcDEgPSBjb21wb25lbnQgIk9udG9sb2d5IE1hcHBpbmciCgogICAgICAgICAgICAgICAgc2hhY2wxID0gY29tcG9uZW50ICJTSEFDTCBWYWxpZGF0aW9uIgogICAgICAgICAgICB9CiAgICAgICAgfQoKICAgICAgICAgICAgICAgb3JnMiA9IHNvZnR3YXJlU3lzdGVtICJQYXJ0aWNpcGF0aW5nIE9yZ2FuaXphdGlvbiBCIiB7CgoKICAgICAgICAgICAgCiAgICAgICAgICAgIGNvbm5lY3RvcjIgPSBjb250YWluZXIgIkVEQyBDb25uZWN0b3IiIHsKICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uICJDb25uZWN0b3IgZm9yIGlkZW50aXR5LCBwb2xpY3kgYW5kIG1ldGFkYXRhIGV4Y2hhbmdlIgoKICAgICAgICAgICAgICAgIGNvbnRyb2xwbGFuZTIgPSBjb21wb25lbnQgIkNvbnRyb2wgUGxhbmUiIHsKICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uICJNYW5hZ2VzIGRhdGEgZXhjaGFuZ2UgYW5kIHBvbGljeSBlbmZvcmNlbWVudCIKICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgZGF0YXBsYW5lMiA9IGNvbXBvbmVudCAiRGF0YSBQbGFuZSIgewogICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gIkhhbmRsZXMgZGF0YSB0cmFuc2ZlciBhbmQgdHJhbnNmb3JtYXRpb24iCiAgICAgICAgICAgIH0KICAgICAgICAgICAgfQoKICAgICAgICAgICAgZnJvbnRlbmQyID0gY29udGFpbmVyICJPcmdhbml6YXRpb24gRnJvbnRlbmQiIHsKICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uICJNYW5hZ2VtZW50IFVJIGZvciB2b2x1bnRlZXJpbmcgb3Bwb3J0dW5pdGllcyIKCiAgICAgICAgICAgICAgICBjYXRhbG9nMiA9IGNvbXBvbmVudCAiT3Bwb3J0dW5pdHkgQ2F0YWxvZyIgewogICAgICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uICJNYW5hZ2VzIGFuZCBwdWJsaXNoZXMgdm9sdW50ZWVyaW5nIG9wcG9ydHVuaXRpZXMiCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICAKCgogICAgICAgICAgICAgICAgcmVwb3J0aW5nMiA9IGNvbXBvbmVudCAiUmVwb3J0aW5nIFNlcnZpY2UiIHsKICAgICAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAiQWdncmVnYXRlcyBhbmQgdmlzdWFsaXplcyBkYXRhIGZvciBnb3Zlcm5hbmNlIGFuZCBzdGF0aXN0aWNzIgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAKICAgICAgICAgICAgCiAgICAgICAgICAgIH0KCiAgICAgICAgICAgIGJhY2tlbmQyID0gY29udGFpbmVyICJPcHBvcnR1bml0eSBNYW5hZ2VtZW50IFNlcnZpY2UiIHsKICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uICJQcmVwYXJlcyBhbmQgbWFuYWdlcyB2b2x1bnRlZXJpbmcgb3Bwb3J0dW5pdGllcyBhbmQgbWF0Y2hlcyBmb3IgdGhlIGZyb250ZW5kIgogICAgICAgICAgICB9CgogICAgICAgICAgICBkYXRhYmFzZTIgPSBjb250YWluZXIgIkxvY2FsIERhdGFiYXNlIiB7CiAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAiU291cmNlIG9mIFRydXRoIGZvciBvcHBvcnR1bml0aWVzIGFuZCByZWdpc3RyYXRpb25zIgogICAgICAgICAgICB9CgogICAgICAgICAgICB3YWxsZXQyID0gY29udGFpbmVyICJXYWxsZXQiIHsKCiAgICAgICAgICAgICAgICB2YzIgPSBjb21wb25lbnQgIlZlcmlmaWFibGUgQ3JlZGVudGlhbHMiCgogICAgICAgICAgICAgICAgZGlkMiA9IGNvbXBvbmVudCAiRElEIEtleXBhaXIiCiAgICAgICAgICAgIH0KCiAgICAgICAgICAgIHNlbWFudGljMiA9IGNvbnRhaW5lciAiU2VtYW50aWMgTGF5ZXIiIHsKCiAgICAgICAgICAgICAgICBlc2NvX21hcDIgPSBjb21wb25lbnQgIkVTQ08gTWFwcGluZyIKCiAgICAgICAgICAgICAgICBvbnRvbG9neV9tYXAyID0gY29tcG9uZW50ICJPbnRvbG9neSBNYXBwaW5nIgoKICAgICAgICAgICAgICAgIHNoYWNsMiA9IGNvbXBvbmVudCAiU0hBQ0wgVmFsaWRhdGlvbiIKICAgICAgICAgICAgfQogICAgICAgIH0KCiAgICAgICAgCiAgICAgICAgIyBSZWxhdGlvbnMKCiAgICAgICAgdm9sdW50ZWVyIC0+IGZyb250ZW5kICJTZWFyY2hlcyBhbmQgYXBwbGllcyBmb3Igb3Bwb3J0dW5pdGllcyIgSFRUUFMKICAgICAgICB2b2x1bnRlZXIgLT4gZXVkaSAiU3RvcmVzIGlkZW50aXR5IGFuZCBjZXJ0aWZpY2F0ZXMiCiAgICAgICAgdm9sdW50ZWVyIC0+IHNpZ25pbiAiQXV0aGVudGljYXRlcyBhbmQgYXV0aG9yaXplcyIgSFRUUFMKICAgICAgICB2b2x1bnRlZXIgLT4gbWFya2V0cGxhY2UgIlNlYXJjaGVzIGFuZCByZXF1ZXN0cyBvcHBvcnR1bml0aWVzIiBIVFRQUwogICAgICAgIHZvbHVudGVlciAtPiBjb21tdW5pdHkgIkNoYXRzIHdpdGggaW4gY29tbXVuaXR5IiBIVFRQUwogICAgICAgIGJhY2tlbmQgLT4gY29ubmVjdG9yICJDb25uZWN0cyB0byBmZWRlcmF0ZWQgY2F0YWxvZyBlbmRwb2ludCIKICAgICAgICBiYWNrZW5kIC0+IG1hcmtldHBsYWNlICJQcmVwYXJlcyBhbmQgcHJvdmlkZXMgbWV0YWRhdGEgZm9yIG9wcG9ydHVuaXRpZXMiCiAgICAgICAgc2lnbmluIC0+IGRhdGFiYXNlICJTZW5kcyBhbmQgc3RvcmVzIHJlZ2lzdHJhdGlvbiBkYXRhIG9mIHZvbHVudGVlcnMiCgogICAgICAgIG1hdGNoaW5nIC0+IGVzY28gIlVzZXMgY29tcGV0ZW5jZSB0YXhvbm9teSIKCiAgICAgICAgbWluaXN0cnkgLT4gcmVwb3J0aW5nICJQZXJmb3JtcyBhbmQgdmlld3MgcmVwb3J0cyIKICAgICAgICBjb25uZWN0b3IgLT4gY29ubmVjdG9yMSAiQ3Jhd2xzIG1ldGFkYXRhIiBFREMKICAgICAgICBjb25uZWN0b3IgLT4gY29ubmVjdG9yMiAiQ3Jhd2xzIG1ldGFkYXRhIiBFREMKICAgICAgICBjb25uZWN0b3IxIC0+IGRhdGFiYXNlMSAiQWNjZXNzZXMgb3Bwb3J0dW5pdGllcyIKICAgICAgICBjb25uZWN0b3IyIC0+IGRhdGFiYXNlMiAiQWNjZXNzZXMgb3Bwb3J0dW5pdGllcyIKICAgICAgICBjb25uZWN0b3IxIC0+IHdhbGxldDEgIkFjY2VzcyBvcmdhbmlzYXRpb25hbCBjcmVkZW50aWFscyIKICAgICAgICBjb25uZWN0b3IyIC0+IHdhbGxldDIgIkFjY2VzcyBvcmdhbmlzYXRpb25hbCBjcmVkZW50aWFscyIKICAgICAgICBjb25uZWN0b3IxIC0+IGdhaWF4ICJQcm92ZXMgb3JnYW5pc2F0aW9uYWwgaWRlbnRpdHkiCiAgICAgICAgY29ubmVjdG9yMiAtPiBnYWlheCAiUHJvdmVzIG9yZ2FuaXNhdGlvbmFsIGlkZW50aXR5IgogICAgICAgIGRhdGFiYXNlMSAtPiBzZW1hbnRpYzEgIlRyYW5zZm9ybXMgbG9jYWwgZGF0YSIKCiAgICAgICAgZGF0YWJhc2UyIC0+IHNlbWFudGljMiAiVHJhbnNmb3JtcyBsb2NhbCBkYXRhIgogICAgICAgIHNlbWFudGljMSAtPiBjb25uZWN0b3IxICJQcm92aWRlcyBKU09OLUxEIGFzc2V0cyIKICAgICAgICBzZW1hbnRpYzIgLT4gY29ubmVjdG9yMiAiUHJvdmlkZXMgSlNPTi1MRCBhc3NldHMiCgogICAgICAgIGJhY2tlbmQgLT4gYXVkaXQgIldyaXRlcyBhdWRpdCBldmVudHMiCgogICAgICAgIHNpZ25pbiAtPiBhdWRpdCAiV3JpdGVzIGF1dGhlbnRpY2F0aW9uIGV2ZW50cyIKICAgIH0KCiAgICB2aWV3cyB7CgogICAgICAgIHN5c3RlbUxhbmRzY2FwZSB2b2x1bnNwaGVyZSB7CiAgICAgICAgICAgIHRpdGxlICJWb2x1blNwaGVyZSBTeXN0ZW0gTGFuZHNjYXBlIgogICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICAgICAgYXV0b0xheW91dCB0YgogICAgICAgIH0KCiAgICAgICAgY29udGFpbmVyIHZvbHVuc3BoZXJlIHsKICAgICAgICAgICAgdGl0bGUgIlZvbHVuU3BoZXJlIFBsYXRmb3JtIENvbnRhaW5lcnMiCiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgICAgICBhdXRvTGF5b3V0IHRiCiAgICAgICAgfQoKICAgICAgICBjb250YWluZXIgb3JnMSB7CiAgICAgICAgICAgIHRpdGxlICJQYXJ0aWNpcGF0aW5nIE9yZ2FuaXphdGlvbiIKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgICAgIGF1dG9MYXlvdXQgdGIKICAgICAgICB9CgogICAgICAgIGNvbnRhaW5lciBvcmcyIHsKICAgICAgICAgICAgdGl0bGUgIlBhcnRpY2lwYXRpbmcgT3JnYW5pemF0aW9uIgogICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICAgICAgYXV0b0xheW91dCB0YgogICAgICAgIH0KCiAgICAgICAgY29tcG9uZW50IGZyb250ZW5kIHsKICAgICAgICAgICAgdGl0bGUgIlZvbHVuU3BoZXJlIEZyb250ZW5kIENvbXBvbmVudHMiCiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgICAgICBhdXRvTGF5b3V0IHRiCiAgICAgICAgfQoKICAgICAgICBjb21wb25lbnQgYmFja2VuZCB7CiAgICAgICAgICAgIHRpdGxlICJWb2x1blNwaGVyZSBCYWNrZW5kIENvbXBvbmVudHMiCiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgICAgICBhdXRvTGF5b3V0IHRiCiAgICAgICAgfQogICAgICAgICBjb21wb25lbnQgY29ubmVjdG9yIHsKICAgICAgICAgICAgdGl0bGUgIlZvbHVuU3BoZXJlIENvbm5lY3RvciBDb21wb25lbnRzIgogICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICAgICAgYXV0b0xheW91dCB0YgogICAgICAgICB9CiAgICAgICAgIGNvbXBvbmVudCBjb25uZWN0b3IxIHsKICAgICAgICAgICAgdGl0bGUgIlBhcnRpY2lwYXRpbmcgT3JnYW5pemF0aW9uIENvbm5lY3RvciBDb21wb25lbnRzIgogICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICAgICAgYXV0b0xheW91dCB0YgogICAgICAgICB9CiAgICAgICAgICAgIGNvbXBvbmVudCBjb25uZWN0b3IyIHsKICAgICAgICAgICAgICAgIHRpdGxlICJQYXJ0aWNpcGF0aW5nIE9yZ2FuaXphdGlvbiBDb25uZWN0b3IgQ29tcG9uZW50cyIKICAgICAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgICAgICAgICAgYXV0b0xheW91dCB0YgogICAgICAgICAgICB9CgogICAgICAgICAgICBjb21wb25lbnQgc2VtYW50aWMxIHsKICAgICAgICAgICAgICAgIHRpdGxlICJQYXJ0aWNpcGF0aW5nIE9yZ2FuaXphdGlvbiBTZW1hbnRpYyBMYXllciBDb21wb25lbnRzIgogICAgICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgICAgICAgICBhdXRvTGF5b3V0IHRiCiAgICAgICAgICAgIH0KICAgICAgICAgICAgY29tcG9uZW50IHNlbWFudGljMiB7CiAgICAgICAgICAgICAgICB0aXRsZSAiUGFydGljaXBhdGluZyBPcmdhbml6YXRpb24gU2VtYW50aWMgTGF5ZXIgQ29tcG9uZW50cyIKICAgICAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgICAgICAgICAgYXV0b0xheW91dCB0YgogICAgICAgICAgICB9CiAgICAgICAgICAgIGNvbXBvbmVudCBmcm9udGVuZDEgewogICAgICAgICAgICAgICAgdGl0bGUgIlBhcnRpY2lwYXRpbmcgT3JnYW5pemF0aW9uIEZyb250ZW5kIENvbXBvbmVudHMiCiAgICAgICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICAgICAgICAgIGF1dG9MYXlvdXQgdGIKICAgICAgICAgICAgfQogICAgICAgICAgICBjb21wb25lbnQgZnJvbnRlbmQyIHsKICAgICAgICAgICAgICAgIHRpdGxlICJQYXJ0aWNpcGF0aW5nIE9yZ2FuaXphdGlvbiBGcm9udGVuZCBDb21wb25lbnRzIgogICAgICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgICAgICAgICBhdXRvTGF5b3V0IHRiCiAgICAgICAgICAgIH0KICAgICAgICAgICAgY29tcG9uZW50IGJhY2tlbmQxIHsKICAgICAgICAgICAgICAgIHRpdGxlICJQYXJ0aWNpcGF0aW5nIE9yZ2FuaXphdGlvbiBCYWNrZW5kIENvbXBvbmVudHMiCiAgICAgICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICAgICAgICAgIGF1dG9MYXlvdXQgdGIKICAgICAgICAgICAgfQogICAgICAgICAgICBjb21wb25lbnQgYmFja2VuZDIgewogICAgICAgICAgICAgICAgdGl0bGUgIlBhcnRpY2lwYXRpbmcgT3JnYW5pemF0aW9uIEJhY2tlbmQgQ29tcG9uZW50cyIKICAgICAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgICAgICAgICAgYXV0b0xheW91dCB0YgogICAgICAgICAgICB9CiAgICAgICAgICAgIGNvbXBvbmVudCBkYXRhYmFzZTEgewogICAgICAgICAgICAgICAgdGl0bGUgIlBhcnRpY2lwYXRpbmcgT3JnYW5pemF0aW9uIERhdGFiYXNlIENvbXBvbmVudHMiCiAgICAgICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICAgICAgICAgIGF1dG9MYXlvdXQgdGIKICAgICAgICAgICAgfQogICAgICAgICAgICBjb21wb25lbnQgZGF0YWJhc2UyIHsKICAgICAgICAgICAgICAgIHRpdGxlICJQYXJ0aWNpcGF0aW5nIE9yZ2FuaXphdGlvbiBEYXRhYmFzZSBDb21wb25lbnRzIgogICAgICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgICAgICAgICBhdXRvTGF5b3V0IHRiCiAgICAgICAgICAgIH0KICAgICAgICAgICAgY29tcG9uZW50IHdhbGxldDEgewogICAgICAgICAgICAgICAgdGl0bGUgIlBhcnRpY2lwYXRpbmcgT3JnYW5pemF0aW9uIFdhbGxldCBDb21wb25lbnRzIgogICAgICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgICAgICAgICBhdXRvTGF5b3V0IHRiCiAgICAgICAgICAgIH0KICAgICAgICAgICAgY29tcG9uZW50IHdhbGxldDIgewogICAgICAgICAgICAgICAgdGl0bGUgIlBhcnRpY2lwYXRpbmcgT3JnYW5pemF0aW9uIFdhbGxldCBDb21wb25lbnRzIgogICAgICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgICAgICAgICBhdXRvTGF5b3V0IHRiCiAgICAgICAgICAgIH0KICAgICAgICAKICAgICAgICAKCiAgICAgICAgdGhlbWUgZGVmYXVsdAoKICAgICAgICBzdHlsZXMgewoKICAgICAgICAgICAgZWxlbWVudCAiUGVyc29uIiB7CiAgICAgICAgICAgICAgICBzaGFwZSBQZXJzb24KICAgICAgICAgICAgfQoKICAgICAgICAgICAgZWxlbWVudCAiUG9saWN5IiB7CiAgICAgICAgICAgICAgICBzaGFwZSBGb2xkZXIKICAgICAgICAgICAgICAgIGJhY2tncm91bmQgI0U0MDgwQQogICAgICAgICAgICB9CgogICAgICAgICAgICBlbGVtZW50ICJvdXRvZnNjb3BlIiB7CiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kICM5OTk5OTkKICAgICAgICAgICAgfQoKICAgICAgICAgICAgZWxlbWVudCAiV2ViIEFwcGxpY2F0aW9uIiB7CiAgICAgICAgICAgICAgICBzaGFwZSBXZWJCcm93c2VyCiAgICAgICAgICAgIH0KICAgICAgICB9CiAgICB9Cn0=",
+    "structurizr.inspection.info" : "0",
+    "structurizr.inspection.ignore" : "0",
+    "structurizr.inspection.warning" : "0"
+  },
+  "views" : {
+    "componentViews" : [ {
+      "automaticLayout" : {
+        "edgeSeparation" : 50,
+        "nodeSeparation" : 50,
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 100,
+        "vertices" : true
+      },
+      "containerId" : "7",
+      "elements" : [ {
+        "id" : "1",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "2",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "8",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "9",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "10",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "11",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "12",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "13",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "19",
+        "x" : 0,
+        "y" : 0
+      } ],
+      "externalContainerBoundariesVisible" : false,
+      "generatedKey" : true,
+      "key" : "Component-001",
+      "name" : "Component View: VolunSphere Platform - Web Frontend",
+      "order" : 5,
+      "relationships" : [ {
+        "id" : "55"
+      }, {
+        "id" : "56"
+      }, {
+        "id" : "57"
+      }, {
+        "id" : "59"
+      }, {
+        "id" : "61"
+      }, {
+        "id" : "66"
+      }, {
+        "id" : "89"
+      }, {
+        "id" : "90"
+      } ],
+      "title" : "VolunSphere Frontend Components"
+    }, {
+      "automaticLayout" : {
+        "edgeSeparation" : 50,
+        "nodeSeparation" : 50,
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 100,
+        "vertices" : true
+      },
+      "containerId" : "13",
+      "elements" : [ {
+        "id" : "5",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "14",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "15",
+        "x" : 0,
+        "y" : 0
+      } ],
+      "externalContainerBoundariesVisible" : false,
+      "generatedKey" : true,
+      "key" : "Component-002",
+      "name" : "Component View: VolunSphere Platform - Backend Service",
+      "order" : 6,
+      "relationships" : [ {
+        "id" : "63"
+      } ],
+      "title" : "VolunSphere Backend Components"
+    }, {
+      "automaticLayout" : {
+        "edgeSeparation" : 50,
+        "nodeSeparation" : 50,
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 100,
+        "vertices" : true
+      },
+      "containerId" : "16",
+      "elements" : [ {
+        "id" : "17",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "18",
+        "x" : 0,
+        "y" : 0
+      } ],
+      "externalContainerBoundariesVisible" : false,
+      "generatedKey" : true,
+      "key" : "Component-003",
+      "name" : "Component View: VolunSphere Platform - EDC Connector",
+      "order" : 7,
+      "title" : "VolunSphere Connector Components"
+    }, {
+      "automaticLayout" : {
+        "edgeSeparation" : 50,
+        "nodeSeparation" : 50,
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 100,
+        "vertices" : true
+      },
+      "containerId" : "21",
+      "elements" : [ {
+        "id" : "22",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "23",
+        "x" : 0,
+        "y" : 0
+      } ],
+      "externalContainerBoundariesVisible" : false,
+      "generatedKey" : true,
+      "key" : "Component-004",
+      "name" : "Component View: Participating Organization A - EDC Connector",
+      "order" : 8,
+      "title" : "Participating Organization Connector Components"
+    }, {
+      "automaticLayout" : {
+        "edgeSeparation" : 50,
+        "nodeSeparation" : 50,
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 100,
+        "vertices" : true
+      },
+      "containerId" : "37",
+      "elements" : [ {
+        "id" : "38",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "39",
+        "x" : 0,
+        "y" : 0
+      } ],
+      "externalContainerBoundariesVisible" : false,
+      "generatedKey" : true,
+      "key" : "Component-005",
+      "name" : "Component View: Participating Organization B - EDC Connector",
+      "order" : 9,
+      "title" : "Participating Organization Connector Components"
+    }, {
+      "automaticLayout" : {
+        "edgeSeparation" : 50,
+        "nodeSeparation" : 50,
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 100,
+        "vertices" : true
+      },
+      "containerId" : "32",
+      "elements" : [ {
+        "id" : "33",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "34",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "35",
+        "x" : 0,
+        "y" : 0
+      } ],
+      "externalContainerBoundariesVisible" : false,
+      "generatedKey" : true,
+      "key" : "Component-006",
+      "name" : "Component View: Participating Organization A - Semantic Layer",
+      "order" : 10,
+      "title" : "Participating Organization Semantic Layer Components"
+    }, {
+      "automaticLayout" : {
+        "edgeSeparation" : 50,
+        "nodeSeparation" : 50,
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 100,
+        "vertices" : true
+      },
+      "containerId" : "48",
+      "elements" : [ {
+        "id" : "49",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "50",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "51",
+        "x" : 0,
+        "y" : 0
+      } ],
+      "externalContainerBoundariesVisible" : false,
+      "generatedKey" : true,
+      "key" : "Component-007",
+      "name" : "Component View: Participating Organization B - Semantic Layer",
+      "order" : 11,
+      "title" : "Participating Organization Semantic Layer Components"
+    }, {
+      "automaticLayout" : {
+        "edgeSeparation" : 50,
+        "nodeSeparation" : 50,
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 100,
+        "vertices" : true
+      },
+      "containerId" : "24",
+      "elements" : [ {
+        "id" : "25",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "26",
+        "x" : 0,
+        "y" : 0
+      } ],
+      "externalContainerBoundariesVisible" : false,
+      "generatedKey" : true,
+      "key" : "Component-008",
+      "name" : "Component View: Participating Organization A - Organization Frontend",
+      "order" : 12,
+      "title" : "Participating Organization Frontend Components"
+    }, {
+      "automaticLayout" : {
+        "edgeSeparation" : 50,
+        "nodeSeparation" : 50,
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 100,
+        "vertices" : true
+      },
+      "containerId" : "40",
+      "elements" : [ {
+        "id" : "41",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "42",
+        "x" : 0,
+        "y" : 0
+      } ],
+      "externalContainerBoundariesVisible" : false,
+      "generatedKey" : true,
+      "key" : "Component-009",
+      "name" : "Component View: Participating Organization B - Organization Frontend",
+      "order" : 13,
+      "title" : "Participating Organization Frontend Components"
+    }, {
+      "automaticLayout" : {
+        "edgeSeparation" : 50,
+        "nodeSeparation" : 50,
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 100,
+        "vertices" : true
+      },
+      "containerId" : "27",
+      "externalContainerBoundariesVisible" : false,
+      "generatedKey" : true,
+      "key" : "Component-010",
+      "name" : "Component View: Participating Organization A - Opportunity Management Service",
+      "order" : 14,
+      "title" : "Participating Organization Backend Components"
+    }, {
+      "automaticLayout" : {
+        "edgeSeparation" : 50,
+        "nodeSeparation" : 50,
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 100,
+        "vertices" : true
+      },
+      "containerId" : "43",
+      "externalContainerBoundariesVisible" : false,
+      "generatedKey" : true,
+      "key" : "Component-011",
+      "name" : "Component View: Participating Organization B - Opportunity Management Service",
+      "order" : 15,
+      "title" : "Participating Organization Backend Components"
+    }, {
+      "automaticLayout" : {
+        "edgeSeparation" : 50,
+        "nodeSeparation" : 50,
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 100,
+        "vertices" : true
+      },
+      "containerId" : "28",
+      "externalContainerBoundariesVisible" : false,
+      "generatedKey" : true,
+      "key" : "Component-012",
+      "name" : "Component View: Participating Organization A - Local Database",
+      "order" : 16,
+      "title" : "Participating Organization Database Components"
+    }, {
+      "automaticLayout" : {
+        "edgeSeparation" : 50,
+        "nodeSeparation" : 50,
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 100,
+        "vertices" : true
+      },
+      "containerId" : "44",
+      "externalContainerBoundariesVisible" : false,
+      "generatedKey" : true,
+      "key" : "Component-013",
+      "name" : "Component View: Participating Organization B - Local Database",
+      "order" : 17,
+      "title" : "Participating Organization Database Components"
+    }, {
+      "automaticLayout" : {
+        "edgeSeparation" : 50,
+        "nodeSeparation" : 50,
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 100,
+        "vertices" : true
+      },
+      "containerId" : "29",
+      "elements" : [ {
+        "id" : "30",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "31",
+        "x" : 0,
+        "y" : 0
+      } ],
+      "externalContainerBoundariesVisible" : false,
+      "generatedKey" : true,
+      "key" : "Component-014",
+      "name" : "Component View: Participating Organization A - Wallet",
+      "order" : 18,
+      "title" : "Participating Organization Wallet Components"
+    }, {
+      "automaticLayout" : {
+        "edgeSeparation" : 50,
+        "nodeSeparation" : 50,
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 100,
+        "vertices" : true
+      },
+      "containerId" : "45",
+      "elements" : [ {
+        "id" : "46",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "47",
+        "x" : 0,
+        "y" : 0
+      } ],
+      "externalContainerBoundariesVisible" : false,
+      "generatedKey" : true,
+      "key" : "Component-015",
+      "name" : "Component View: Participating Organization B - Wallet",
+      "order" : 19,
+      "title" : "Participating Organization Wallet Components"
+    } ],
+    "configuration" : {
+      "lastSavedView" : "Container-001",
+      "styles" : {
+        "elements" : [ {
+          "shape" : "Person",
+          "tag" : "Person"
+        }, {
+          "background" : "#e4080a",
+          "shape" : "Folder",
+          "tag" : "Policy"
+        }, {
+          "shape" : "WebBrowser",
+          "tag" : "Web Application"
+        }, {
+          "background" : "#999999",
+          "tag" : "outofscope"
+        } ]
+      },
+      "terminology" : { },
+      "themes" : [ "https://static.structurizr.com/themes/default/theme.json" ]
+    },
+    "containerViews" : [ {
+      "automaticLayout" : {
+        "edgeSeparation" : 50,
+        "nodeSeparation" : 50,
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 100,
+        "vertices" : true
+      },
+      "elements" : [ {
+        "id" : "1",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "2",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "5",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "7",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "12",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "13",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "16",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "19",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "20",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "36",
+        "x" : 0,
+        "y" : 0
+      } ],
+      "externalSoftwareSystemBoundariesVisible" : false,
+      "generatedKey" : true,
+      "key" : "Container-001",
+      "name" : "Container View: VolunSphere Platform",
+      "order" : 2,
+      "relationships" : [ {
+        "id" : "52"
+      }, {
+        "id" : "58"
+      }, {
+        "id" : "60"
+      }, {
+        "id" : "62"
+      }, {
+        "id" : "64"
+      }, {
+        "id" : "67"
+      }, {
+        "id" : "70"
+      }, {
+        "id" : "74"
+      }, {
+        "id" : "89"
+      }, {
+        "id" : "91"
+      } ],
+      "softwareSystemId" : "6",
+      "title" : "VolunSphere Platform Containers"
+    }, {
+      "automaticLayout" : {
+        "edgeSeparation" : 50,
+        "nodeSeparation" : 50,
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 100,
+        "vertices" : true
+      },
+      "elements" : [ {
+        "id" : "3",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "6",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "21",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "24",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "27",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "28",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "29",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "32",
+        "x" : 0,
+        "y" : 0
+      } ],
+      "externalSoftwareSystemBoundariesVisible" : false,
+      "generatedKey" : true,
+      "key" : "Container-002",
+      "name" : "Container View: Participating Organization A",
+      "order" : 3,
+      "relationships" : [ {
+        "id" : "71"
+      }, {
+        "id" : "77"
+      }, {
+        "id" : "79"
+      }, {
+        "id" : "81"
+      }, {
+        "id" : "85"
+      }, {
+        "id" : "87"
+      } ],
+      "softwareSystemId" : "20",
+      "title" : "Participating Organization"
+    }, {
+      "automaticLayout" : {
+        "edgeSeparation" : 50,
+        "nodeSeparation" : 50,
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 100,
+        "vertices" : true
+      },
+      "elements" : [ {
+        "id" : "3",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "6",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "37",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "40",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "43",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "44",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "45",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "48",
+        "x" : 0,
+        "y" : 0
+      } ],
+      "externalSoftwareSystemBoundariesVisible" : false,
+      "generatedKey" : true,
+      "key" : "Container-003",
+      "name" : "Container View: Participating Organization B",
+      "order" : 4,
+      "relationships" : [ {
+        "id" : "75"
+      }, {
+        "id" : "78"
+      }, {
+        "id" : "80"
+      }, {
+        "id" : "83"
+      }, {
+        "id" : "86"
+      }, {
+        "id" : "88"
+      } ],
+      "softwareSystemId" : "36",
+      "title" : "Participating Organization"
+    } ],
+    "systemLandscapeViews" : [ {
+      "automaticLayout" : {
+        "edgeSeparation" : 50,
+        "nodeSeparation" : 50,
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 100,
+        "vertices" : true
+      },
+      "elements" : [ {
+        "id" : "1",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "2",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "3",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "4",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "5",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "6",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "20",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "36",
+        "x" : 0,
+        "y" : 0
+      } ],
+      "enterpriseBoundaryVisible" : true,
+      "key" : "volunsphere",
+      "name" : "System Landscape View",
+      "order" : 1,
+      "relationships" : [ {
+        "id" : "53"
+      }, {
+        "id" : "54"
+      }, {
+        "id" : "65"
+      }, {
+        "id" : "68"
+      }, {
+        "id" : "72"
+      }, {
+        "id" : "76"
+      }, {
+        "id" : "82"
+      }, {
+        "id" : "84"
+      } ],
+      "title" : "VolunSphere System Landscape"
+    } ]
+  }
+}

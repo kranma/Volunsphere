@@ -1,0 +1,10 @@
+services:
+  structurizr:
+    image: structurizr/structurizr:latest
+    stdin_open: true
+    tty: true
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./src:/usr/local/structurizr
+    command: local

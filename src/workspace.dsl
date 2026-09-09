@@ -55,12 +55,12 @@ workspace "VolunSphere" {
 
                 
                 identity = component "Identity Service" {
-                    description "Authentication and credential verification"
+                    description "Authentication and credential verification of organisations"
                 }
 
-                matching = component "Matching Service" {
-                description "Skill and certificate matching based on ESCO"
-            }
+                core = component "Core Backend" {
+                    description "Communicates with other connectors, prepares metadata for the Frontend, forwards requests to Connectors"
+                }
             }
 
 
@@ -205,10 +205,14 @@ workspace "VolunSphere" {
         backend -> connector "Connects to federated catalog endpoint"
         backend -> marketplace "Prepares and provides metadata for opportunities"
         signin -> database "Sends and stores registration data of volunteers"
-
-        matching -> esco "Uses competence taxonomy"
-
+        marketplace -> core "Forwards requests"
+        core -> marketplace "Provides metadata for opportunities"
+        core -> controlplane "Receives and forwards requests to connector"
+        core -> dataplane "Receives and forwards requested data to connector"
+        core -> database "Forwards registration data of volunteers for requests"
         ministry -> reporting "Performs and views reports"
+        ministry -> signin "Authenticates and authorizes" HTTPS
+        ministry -> database "Sends and stores registration data of ministry"
         connector -> connector1 "Crawls metadata" EDC
         connector -> connector2 "Crawls metadata" EDC
         connector1 -> database1 "Accesses opportunities"

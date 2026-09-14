@@ -6,12 +6,12 @@ workspace "VolunSphere" {
             description "Searches for volunteering opportunities and applies for them"
         }
 
-        ministry = softwareSystem "BMSGPK" {
+        ministry = softwareSystem "BMASGPK" {
             description "Ministry accessing reports, statistics and governance functions"
         }
 
         gaiax = softwareSystem "Gaia-X Trust Framework" {
-            description "Trust framework for participant onboarding and credential verification"
+            description "Trust framework for organisation onboarding and credential verification"
             tags "outofscope"
         }
 
@@ -25,7 +25,7 @@ workspace "VolunSphere" {
             tags "outofscope"
         }
 
-        volunsphere = softwareSystem "VolunSphere Platform" {
+        volunsphere = softwareSystem "Plattform Digitaler FWP" {
 
             frontend = container "Web Frontend" {
                 description "Marketplace and user portal"
@@ -96,16 +96,15 @@ workspace "VolunSphere" {
                 description "Handles data transfer and transformation"
             }
             }
-
             frontend1 = container "Organization Frontend" {
-                description "Management UI for volunteering opportunities"
+                description "Optional UI for analythics"
 
-                catalog1 = component "Opportunity Catalog" {
-                    description "Manages and publishes volunteering opportunities"
+                login1 = component "Login Service" {
+                    description "Authenticates and authorizes users"
                 }
-                
-
-
+                catalog1 = component "UI" {
+                    description "Interactive UI for managing requests of volunteers"
+                }
                 reporting1 = component "Reporting Service" {
                     description "Aggregates and visualizes data for governance and statistics"
                 }
@@ -113,12 +112,12 @@ workspace "VolunSphere" {
             
             }
 
-            backend1 = container "Opportunity Management Service" {
-                description "Prepares and manages volunteering opportunities and matches for the frontend"
+            backend1 = container "Backend Service" {
+                description "Prepares and manages volunteer requests"
             }
 
             database1 = container "Local Database" {
-                description "Source of Truth for opportunities and registrations"
+                description "Source of Truth for opportunities and volunteer requests"
             }
 
             wallet1 = container "Wallet" {
@@ -138,7 +137,7 @@ workspace "VolunSphere" {
             }
         }
 
-               org2 = softwareSystem "Participating Organization B" {
+    org2 = softwareSystem "Participating Organization B" {
 
 
             
@@ -154,14 +153,14 @@ workspace "VolunSphere" {
             }
 
             frontend2 = container "Organization Frontend" {
-                description "Management UI for volunteering opportunities"
+                description "Optional UI for analythics"
 
-                catalog2 = component "Opportunity Catalog" {
-                    description "Manages and publishes volunteering opportunities"
+                login2 = component "Login Service" {
+                    description "Authenticates and authorizes users"
                 }
-                
-
-
+                catalog2 = component "UI" {
+                    description "Interactive UI for managing requests of volunteers"
+                }
                 reporting2 = component "Reporting Service" {
                     description "Aggregates and visualizes data for governance and statistics"
                 }
@@ -169,12 +168,12 @@ workspace "VolunSphere" {
             
             }
 
-            backend2 = container "Opportunity Management Service" {
-                description "Prepares and manages volunteering opportunities and matches for the frontend"
+            backend2 = container "Backend Service" {
+                description "Prepares and manages volunteer requests"
             }
 
             database2 = container "Local Database" {
-                description "Source of Truth for opportunities and registrations"
+                description "Source of Truth for opportunities and volunteer requests"
             }
 
             wallet2 = container "Wallet" {
@@ -193,7 +192,15 @@ workspace "VolunSphere" {
                 shacl2 = component "SHACL Validation"
             }
         }
+    extopt1 = softwareSystem "External Opportunity System A" {
+            description "External source of volunteering opportunities"
+            tags "outofscope"
+        }
 
+    extopt2 = softwareSystem "External Opportunity System B" {
+            description "External source of volunteering opportunities"
+            tags "outofscope"
+        }
         
         # Relations
 
@@ -219,17 +226,31 @@ workspace "VolunSphere" {
         connector2 -> database2 "Accesses opportunities"
         connector1 -> wallet1 "Access organisational credentials"
         connector2 -> wallet2 "Access organisational credentials"
-        connector1 -> gaiax "Proves organisational identity"
-        connector2 -> gaiax "Proves organisational identity"
-        database1 -> semantic1 "Transforms local data"
+        connector1 -> gaiax "Proves organisational identity, obtains VCs"
+        connector2 -> gaiax "Proves organisational identity, obtains VCs"
+        semantic1 -> database1 "Provides transformed data"
 
-        database2 -> semantic2 "Transforms local data"
+        semantic2 -> database2 "Provides transformed data"
         semantic1 -> connector1 "Provides JSON-LD assets"
         semantic2 -> connector2 "Provides JSON-LD assets"
-
+        connector1 -> database1 "Stores requests and registrations of volunteers"
+        connector2 -> database2 "Stores requests and registrations of volunteers"backend
+        backend1 -> database1 "Processes requests and opportunities"
+        backend2 -> database2 "Prepares requests and opportunities"
+        frontend1 -> backend1 "Shows requests and opportunities"
+        frontend2 -> backend2 "Shows requests and opportunities"
         backend -> audit "Writes audit events"
-
+        ontology_map1 -> extopt1 "Matches external opportunities to defined ontology"
+        ontology_map2 -> extopt2 "Matches external opportunities to defined ontology"
+        shacl1 -> ontology_map1 "Validates transformed opportunities against defined ontology"
+        shacl2 -> ontology_map2 "Validates transformed opportunities against defined ontology"
+        ontology_map1 -> database1 "Stores transformed opportunities"
+        ontology_map2 -> database2 "Stores transformed opportunities"
+        ontology_map1 -> esco_map1 "Matches transformed opportunities to defined competences"
+        ontology_map2 -> esco_map2 "Matches transformed opportunities to defined competences"
         signin -> audit "Writes authentication events"
+        esco -> esco_map1 "Provides skill and competence vocabulary"
+        esco -> esco_map2 "Provides skill and competence vocabulary"
     }
 
     views {

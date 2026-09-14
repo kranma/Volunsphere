@@ -3,7 +3,7 @@
   "description" : "Description",
   "documentation" : { },
   "id" : 1,
-  "lastModifiedDate" : "2026-09-09T11:21:23Z",
+  "lastModifiedDate" : "2026-09-14T20:45:50Z",
   "model" : {
     "people" : [ {
       "description" : "Searches for volunteering opportunities and applies for them",
@@ -15,41 +15,41 @@
       "relationships" : [ {
         "description" : "Searches and applies for opportunities",
         "destinationId" : "7",
-        "id" : "52",
+        "id" : "56",
         "sourceId" : "1",
         "tags" : "Relationship",
         "technology" : "HTTPS"
       }, {
         "description" : "Searches and applies for opportunities",
         "destinationId" : "6",
-        "id" : "53",
-        "linkedRelationshipId" : "52",
+        "id" : "57",
+        "linkedRelationshipId" : "56",
         "sourceId" : "1",
         "technology" : "HTTPS"
       }, {
         "description" : "Stores identity and certificates",
         "destinationId" : "4",
-        "id" : "54",
+        "id" : "58",
         "sourceId" : "1",
         "tags" : "Relationship"
       }, {
         "description" : "Authenticates and authorizes",
         "destinationId" : "10",
-        "id" : "55",
+        "id" : "59",
         "sourceId" : "1",
         "tags" : "Relationship",
         "technology" : "HTTPS"
       }, {
         "description" : "Searches and requests opportunities",
         "destinationId" : "8",
-        "id" : "56",
+        "id" : "60",
         "sourceId" : "1",
         "tags" : "Relationship",
         "technology" : "HTTPS"
       }, {
         "description" : "Chats with in community",
         "destinationId" : "9",
-        "id" : "57",
+        "id" : "61",
         "sourceId" : "1",
         "tags" : "Relationship",
         "technology" : "HTTPS"
@@ -60,45 +60,45 @@
       "description" : "Ministry accessing reports, statistics and governance functions",
       "documentation" : { },
       "id" : "2",
-      "name" : "BMSGPK",
+      "name" : "BMASGPK",
       "properties" : {
         "structurizr.dsl.identifier" : "ministry"
       },
       "relationships" : [ {
         "description" : "Performs and views reports",
         "destinationId" : "11",
-        "id" : "76",
+        "id" : "80",
         "sourceId" : "2",
         "tags" : "Relationship"
       }, {
         "description" : "Performs and views reports",
         "destinationId" : "7",
-        "id" : "77",
-        "linkedRelationshipId" : "76",
+        "id" : "81",
+        "linkedRelationshipId" : "80",
         "sourceId" : "2"
       }, {
         "description" : "Performs and views reports",
         "destinationId" : "6",
-        "id" : "78",
-        "linkedRelationshipId" : "76",
+        "id" : "82",
+        "linkedRelationshipId" : "80",
         "sourceId" : "2"
       }, {
         "description" : "Authenticates and authorizes",
         "destinationId" : "10",
-        "id" : "79",
+        "id" : "83",
         "sourceId" : "2",
         "tags" : "Relationship",
         "technology" : "HTTPS"
       }, {
         "description" : "Sends and stores registration data of ministry",
         "destinationId" : "12",
-        "id" : "80",
+        "id" : "84",
         "sourceId" : "2",
         "tags" : "Relationship"
       } ],
       "tags" : "Element,Software System"
     }, {
-      "description" : "Trust framework for participant onboarding and credential verification",
+      "description" : "Trust framework for organisation onboarding and credential verification",
       "documentation" : { },
       "id" : "3",
       "name" : "Gaia-X Trust Framework",
@@ -123,6 +123,43 @@
       "properties" : {
         "structurizr.dsl.identifier" : "esco"
       },
+      "relationships" : [ {
+        "description" : "Provides skill and competence vocabulary",
+        "destinationId" : "34",
+        "id" : "126",
+        "sourceId" : "5",
+        "tags" : "Relationship"
+      }, {
+        "description" : "Provides skill and competence vocabulary",
+        "destinationId" : "33",
+        "id" : "127",
+        "linkedRelationshipId" : "126",
+        "sourceId" : "5"
+      }, {
+        "description" : "Provides skill and competence vocabulary",
+        "destinationId" : "20",
+        "id" : "128",
+        "linkedRelationshipId" : "126",
+        "sourceId" : "5"
+      }, {
+        "description" : "Provides skill and competence vocabulary",
+        "destinationId" : "51",
+        "id" : "129",
+        "sourceId" : "5",
+        "tags" : "Relationship"
+      }, {
+        "description" : "Provides skill and competence vocabulary",
+        "destinationId" : "50",
+        "id" : "130",
+        "linkedRelationshipId" : "129",
+        "sourceId" : "5"
+      }, {
+        "description" : "Provides skill and competence vocabulary",
+        "destinationId" : "37",
+        "id" : "131",
+        "linkedRelationshipId" : "129",
+        "sourceId" : "5"
+      } ],
       "tags" : "Element,Software System,outofscope"
     }, {
       "containers" : [ {
@@ -137,14 +174,14 @@
           "relationships" : [ {
             "description" : "Forwards requests",
             "destinationId" : "15",
-            "id" : "63",
+            "id" : "67",
             "sourceId" : "8",
             "tags" : "Relationship"
           }, {
             "description" : "Forwards requests",
             "destinationId" : "13",
-            "id" : "64",
-            "linkedRelationshipId" : "63",
+            "id" : "68",
+            "linkedRelationshipId" : "67",
             "sourceId" : "8"
           } ],
           "tags" : "Element,Component"
@@ -168,13 +205,13 @@
           "relationships" : [ {
             "description" : "Sends and stores registration data of volunteers",
             "destinationId" : "12",
-            "id" : "61",
+            "id" : "65",
             "sourceId" : "10",
             "tags" : "Relationship"
           }, {
             "description" : "Writes authentication events",
             "destinationId" : "19",
-            "id" : "102",
+            "id" : "124",
             "sourceId" : "10",
             "tags" : "Relationship"
           } ],
@@ -199,26 +236,26 @@
         "relationships" : [ {
           "description" : "Sends and stores registration data of volunteers",
           "destinationId" : "12",
-          "id" : "62",
-          "linkedRelationshipId" : "61",
+          "id" : "66",
+          "linkedRelationshipId" : "65",
           "sourceId" : "7"
         }, {
           "description" : "Forwards requests",
           "destinationId" : "15",
-          "id" : "65",
-          "linkedRelationshipId" : "63",
+          "id" : "69",
+          "linkedRelationshipId" : "67",
           "sourceId" : "7"
         }, {
           "description" : "Forwards requests",
           "destinationId" : "13",
-          "id" : "66",
-          "linkedRelationshipId" : "63",
+          "id" : "70",
+          "linkedRelationshipId" : "67",
           "sourceId" : "7"
         }, {
           "description" : "Writes authentication events",
           "destinationId" : "19",
-          "id" : "103",
-          "linkedRelationshipId" : "102",
+          "id" : "125",
+          "linkedRelationshipId" : "124",
           "sourceId" : "7"
         } ],
         "tags" : "Element,Container"
@@ -252,37 +289,37 @@
           "relationships" : [ {
             "description" : "Provides metadata for opportunities",
             "destinationId" : "8",
-            "id" : "67",
+            "id" : "71",
             "sourceId" : "15",
             "tags" : "Relationship"
           }, {
             "description" : "Provides metadata for opportunities",
             "destinationId" : "7",
-            "id" : "68",
-            "linkedRelationshipId" : "67",
+            "id" : "72",
+            "linkedRelationshipId" : "71",
             "sourceId" : "15"
           }, {
             "description" : "Receives and forwards requests to connector",
             "destinationId" : "17",
-            "id" : "69",
+            "id" : "73",
             "sourceId" : "15",
             "tags" : "Relationship"
           }, {
             "description" : "Receives and forwards requests to connector",
             "destinationId" : "16",
-            "id" : "70",
-            "linkedRelationshipId" : "69",
+            "id" : "74",
+            "linkedRelationshipId" : "73",
             "sourceId" : "15"
           }, {
             "description" : "Receives and forwards requested data to connector",
             "destinationId" : "18",
-            "id" : "72",
+            "id" : "76",
             "sourceId" : "15",
             "tags" : "Relationship"
           }, {
             "description" : "Forwards registration data of volunteers for requests",
             "destinationId" : "12",
-            "id" : "74",
+            "id" : "78",
             "sourceId" : "15",
             "tags" : "Relationship"
           } ],
@@ -298,43 +335,43 @@
         "relationships" : [ {
           "description" : "Connects to federated catalog endpoint",
           "destinationId" : "16",
-          "id" : "58",
+          "id" : "62",
           "sourceId" : "13",
           "tags" : "Relationship"
         }, {
           "description" : "Prepares and provides metadata for opportunities",
           "destinationId" : "8",
-          "id" : "59",
+          "id" : "63",
           "sourceId" : "13",
           "tags" : "Relationship"
         }, {
           "description" : "Prepares and provides metadata for opportunities",
           "destinationId" : "7",
-          "id" : "60",
-          "linkedRelationshipId" : "59",
+          "id" : "64",
+          "linkedRelationshipId" : "63",
           "sourceId" : "13"
         }, {
           "description" : "Receives and forwards requests to connector",
           "destinationId" : "17",
-          "id" : "71",
-          "linkedRelationshipId" : "69",
+          "id" : "75",
+          "linkedRelationshipId" : "73",
           "sourceId" : "13"
         }, {
           "description" : "Receives and forwards requested data to connector",
           "destinationId" : "18",
-          "id" : "73",
-          "linkedRelationshipId" : "72",
+          "id" : "77",
+          "linkedRelationshipId" : "76",
           "sourceId" : "13"
         }, {
           "description" : "Forwards registration data of volunteers for requests",
           "destinationId" : "12",
-          "id" : "75",
-          "linkedRelationshipId" : "74",
+          "id" : "79",
+          "linkedRelationshipId" : "78",
           "sourceId" : "13"
         }, {
           "description" : "Writes audit events",
           "destinationId" : "19",
-          "id" : "101",
+          "id" : "111",
           "sourceId" : "13",
           "tags" : "Relationship"
         } ],
@@ -369,29 +406,29 @@
         "relationships" : [ {
           "description" : "Crawls metadata",
           "destinationId" : "21",
-          "id" : "81",
-          "sourceId" : "16",
-          "tags" : "Relationship",
-          "technology" : "EDC"
-        }, {
-          "description" : "Crawls metadata",
-          "destinationId" : "20",
-          "id" : "82",
-          "linkedRelationshipId" : "81",
-          "sourceId" : "16",
-          "technology" : "EDC"
-        }, {
-          "description" : "Crawls metadata",
-          "destinationId" : "37",
           "id" : "85",
           "sourceId" : "16",
           "tags" : "Relationship",
           "technology" : "EDC"
         }, {
           "description" : "Crawls metadata",
-          "destinationId" : "36",
+          "destinationId" : "20",
           "id" : "86",
           "linkedRelationshipId" : "85",
+          "sourceId" : "16",
+          "technology" : "EDC"
+        }, {
+          "description" : "Crawls metadata",
+          "destinationId" : "38",
+          "id" : "89",
+          "sourceId" : "16",
+          "tags" : "Relationship",
+          "technology" : "EDC"
+        }, {
+          "description" : "Crawls metadata",
+          "destinationId" : "37",
+          "id" : "90",
+          "linkedRelationshipId" : "89",
           "sourceId" : "16",
           "technology" : "EDC"
         } ],
@@ -408,36 +445,36 @@
       } ],
       "documentation" : { },
       "id" : "6",
-      "name" : "VolunSphere Platform",
+      "name" : "Plattform Digitaler FWP",
       "properties" : {
         "structurizr.dsl.identifier" : "volunsphere"
       },
       "relationships" : [ {
         "description" : "Crawls metadata",
         "destinationId" : "21",
-        "id" : "83",
-        "linkedRelationshipId" : "81",
-        "sourceId" : "6",
-        "technology" : "EDC"
-      }, {
-        "description" : "Crawls metadata",
-        "destinationId" : "20",
-        "id" : "84",
-        "linkedRelationshipId" : "81",
-        "sourceId" : "6",
-        "technology" : "EDC"
-      }, {
-        "description" : "Crawls metadata",
-        "destinationId" : "37",
         "id" : "87",
         "linkedRelationshipId" : "85",
         "sourceId" : "6",
         "technology" : "EDC"
       }, {
         "description" : "Crawls metadata",
-        "destinationId" : "36",
+        "destinationId" : "20",
         "id" : "88",
         "linkedRelationshipId" : "85",
+        "sourceId" : "6",
+        "technology" : "EDC"
+      }, {
+        "description" : "Crawls metadata",
+        "destinationId" : "38",
+        "id" : "91",
+        "linkedRelationshipId" : "89",
+        "sourceId" : "6",
+        "technology" : "EDC"
+      }, {
+        "description" : "Crawls metadata",
+        "destinationId" : "37",
+        "id" : "92",
+        "linkedRelationshipId" : "89",
         "sourceId" : "6",
         "technology" : "EDC"
       } ],
@@ -472,30 +509,45 @@
         },
         "relationships" : [ {
           "description" : "Accesses opportunities",
-          "destinationId" : "28",
-          "id" : "89",
+          "destinationId" : "29",
+          "id" : "93",
           "sourceId" : "21",
           "tags" : "Relationship"
         }, {
           "description" : "Access organisational credentials",
-          "destinationId" : "29",
-          "id" : "91",
+          "destinationId" : "30",
+          "id" : "95",
           "sourceId" : "21",
           "tags" : "Relationship"
         }, {
-          "description" : "Proves organisational identity",
+          "description" : "Proves organisational identity, obtains VCs",
           "destinationId" : "3",
-          "id" : "93",
+          "id" : "97",
+          "sourceId" : "21",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Stores requests and registrations of volunteers",
+          "destinationId" : "29",
+          "id" : "105",
           "sourceId" : "21",
           "tags" : "Relationship"
         } ],
         "tags" : "Element,Container"
       }, {
         "components" : [ {
-          "description" : "Manages and publishes volunteering opportunities",
+          "description" : "Authenticates and authorizes users",
           "documentation" : { },
           "id" : "25",
-          "name" : "Opportunity Catalog",
+          "name" : "Login Service",
+          "properties" : {
+            "structurizr.dsl.identifier" : "login1"
+          },
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Interactive UI for managing requests of volunteers",
+          "documentation" : { },
+          "id" : "26",
+          "name" : "UI",
           "properties" : {
             "structurizr.dsl.identifier" : "catalog1"
           },
@@ -503,50 +555,57 @@
         }, {
           "description" : "Aggregates and visualizes data for governance and statistics",
           "documentation" : { },
-          "id" : "26",
+          "id" : "27",
           "name" : "Reporting Service",
           "properties" : {
             "structurizr.dsl.identifier" : "reporting1"
           },
           "tags" : "Element,Component"
         } ],
-        "description" : "Management UI for volunteering opportunities",
+        "description" : "Optional UI for analythics",
         "documentation" : { },
         "id" : "24",
         "name" : "Organization Frontend",
         "properties" : {
           "structurizr.dsl.identifier" : "frontend1"
         },
+        "relationships" : [ {
+          "description" : "Shows requests and opportunities",
+          "destinationId" : "28",
+          "id" : "109",
+          "sourceId" : "24",
+          "tags" : "Relationship"
+        } ],
         "tags" : "Element,Container"
       }, {
-        "description" : "Prepares and manages volunteering opportunities and matches for the frontend",
+        "description" : "Prepares and manages volunteer requests",
         "documentation" : { },
-        "id" : "27",
-        "name" : "Opportunity Management Service",
+        "id" : "28",
+        "name" : "Backend Service",
         "properties" : {
           "structurizr.dsl.identifier" : "backend1"
         },
-        "tags" : "Element,Container"
-      }, {
-        "description" : "Source of Truth for opportunities and registrations",
-        "documentation" : { },
-        "id" : "28",
-        "name" : "Local Database",
-        "properties" : {
-          "structurizr.dsl.identifier" : "database1"
-        },
         "relationships" : [ {
-          "description" : "Transforms local data",
-          "destinationId" : "32",
-          "id" : "97",
+          "description" : "Processes requests and opportunities",
+          "destinationId" : "29",
+          "id" : "107",
           "sourceId" : "28",
           "tags" : "Relationship"
         } ],
         "tags" : "Element,Container"
       }, {
+        "description" : "Source of Truth for opportunities and volunteer requests",
+        "documentation" : { },
+        "id" : "29",
+        "name" : "Local Database",
+        "properties" : {
+          "structurizr.dsl.identifier" : "database1"
+        },
+        "tags" : "Element,Container"
+      }, {
         "components" : [ {
           "documentation" : { },
-          "id" : "30",
+          "id" : "31",
           "name" : "Verifiable Credentials",
           "properties" : {
             "structurizr.dsl.identifier" : "vc1"
@@ -554,7 +613,7 @@
           "tags" : "Element,Component"
         }, {
           "documentation" : { },
-          "id" : "31",
+          "id" : "32",
           "name" : "DID Keypair",
           "properties" : {
             "structurizr.dsl.identifier" : "did1"
@@ -562,7 +621,7 @@
           "tags" : "Element,Component"
         } ],
         "documentation" : { },
-        "id" : "29",
+        "id" : "30",
         "name" : "Wallet",
         "properties" : {
           "structurizr.dsl.identifier" : "wallet1"
@@ -571,7 +630,7 @@
       }, {
         "components" : [ {
           "documentation" : { },
-          "id" : "33",
+          "id" : "34",
           "name" : "ESCO Mapping",
           "properties" : {
             "structurizr.dsl.identifier" : "esco_map1"
@@ -579,33 +638,71 @@
           "tags" : "Element,Component"
         }, {
           "documentation" : { },
-          "id" : "34",
+          "id" : "35",
           "name" : "Ontology Mapping",
           "properties" : {
             "structurizr.dsl.identifier" : "ontology_map1"
           },
+          "relationships" : [ {
+            "description" : "Matches external opportunities to defined ontology",
+            "destinationId" : "54",
+            "id" : "112",
+            "sourceId" : "35",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Stores transformed opportunities",
+            "destinationId" : "29",
+            "id" : "120",
+            "sourceId" : "35",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Matches transformed opportunities to defined competences",
+            "destinationId" : "34",
+            "id" : "122",
+            "sourceId" : "35",
+            "tags" : "Relationship"
+          } ],
           "tags" : "Element,Component"
         }, {
           "documentation" : { },
-          "id" : "35",
+          "id" : "36",
           "name" : "SHACL Validation",
           "properties" : {
             "structurizr.dsl.identifier" : "shacl1"
           },
+          "relationships" : [ {
+            "description" : "Validates transformed opportunities against defined ontology",
+            "destinationId" : "35",
+            "id" : "118",
+            "sourceId" : "36",
+            "tags" : "Relationship"
+          } ],
           "tags" : "Element,Component"
         } ],
         "documentation" : { },
-        "id" : "32",
+        "id" : "33",
         "name" : "Semantic Layer",
         "properties" : {
           "structurizr.dsl.identifier" : "semantic1"
         },
         "relationships" : [ {
+          "description" : "Provides transformed data",
+          "destinationId" : "29",
+          "id" : "101",
+          "sourceId" : "33",
+          "tags" : "Relationship"
+        }, {
           "description" : "Provides JSON-LD assets",
           "destinationId" : "21",
-          "id" : "99",
-          "sourceId" : "32",
+          "id" : "103",
+          "sourceId" : "33",
           "tags" : "Relationship"
+        }, {
+          "description" : "Matches external opportunities to defined ontology",
+          "destinationId" : "54",
+          "id" : "113",
+          "linkedRelationshipId" : "112",
+          "sourceId" : "33"
         } ],
         "tags" : "Element,Container"
       } ],
@@ -616,10 +713,16 @@
         "structurizr.dsl.identifier" : "org1"
       },
       "relationships" : [ {
-        "description" : "Proves organisational identity",
+        "description" : "Proves organisational identity, obtains VCs",
         "destinationId" : "3",
-        "id" : "94",
-        "linkedRelationshipId" : "93",
+        "id" : "98",
+        "linkedRelationshipId" : "97",
+        "sourceId" : "20"
+      }, {
+        "description" : "Matches external opportunities to defined ontology",
+        "destinationId" : "54",
+        "id" : "114",
+        "linkedRelationshipId" : "112",
         "sourceId" : "20"
       } ],
       "tags" : "Element,Software System"
@@ -628,7 +731,7 @@
         "components" : [ {
           "description" : "Manages data exchange and policy enforcement",
           "documentation" : { },
-          "id" : "38",
+          "id" : "39",
           "name" : "Control Plane",
           "properties" : {
             "structurizr.dsl.identifier" : "controlplane2"
@@ -637,7 +740,7 @@
         }, {
           "description" : "Handles data transfer and transformation",
           "documentation" : { },
-          "id" : "39",
+          "id" : "40",
           "name" : "Data Plane",
           "properties" : {
             "structurizr.dsl.identifier" : "dataplane2"
@@ -646,37 +749,53 @@
         } ],
         "description" : "Connector for identity, policy and metadata exchange",
         "documentation" : { },
-        "id" : "37",
+        "id" : "38",
         "name" : "EDC Connector",
         "properties" : {
           "structurizr.dsl.identifier" : "connector2"
         },
         "relationships" : [ {
           "description" : "Accesses opportunities",
-          "destinationId" : "44",
-          "id" : "90",
-          "sourceId" : "37",
+          "destinationId" : "46",
+          "id" : "94",
+          "sourceId" : "38",
           "tags" : "Relationship"
         }, {
           "description" : "Access organisational credentials",
-          "destinationId" : "45",
-          "id" : "92",
-          "sourceId" : "37",
+          "destinationId" : "47",
+          "id" : "96",
+          "sourceId" : "38",
           "tags" : "Relationship"
         }, {
-          "description" : "Proves organisational identity",
+          "description" : "Proves organisational identity, obtains VCs",
           "destinationId" : "3",
-          "id" : "95",
-          "sourceId" : "37",
+          "id" : "99",
+          "sourceId" : "38",
           "tags" : "Relationship"
+        }, {
+          "description" : "Stores requests and registrations of volunteers",
+          "destinationId" : "46",
+          "id" : "106",
+          "sourceId" : "38",
+          "tags" : "Relationship",
+          "technology" : "backend"
         } ],
         "tags" : "Element,Container"
       }, {
         "components" : [ {
-          "description" : "Manages and publishes volunteering opportunities",
+          "description" : "Authenticates and authorizes users",
           "documentation" : { },
-          "id" : "41",
-          "name" : "Opportunity Catalog",
+          "id" : "42",
+          "name" : "Login Service",
+          "properties" : {
+            "structurizr.dsl.identifier" : "login2"
+          },
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Interactive UI for managing requests of volunteers",
+          "documentation" : { },
+          "id" : "43",
+          "name" : "UI",
           "properties" : {
             "structurizr.dsl.identifier" : "catalog2"
           },
@@ -684,50 +803,57 @@
         }, {
           "description" : "Aggregates and visualizes data for governance and statistics",
           "documentation" : { },
-          "id" : "42",
+          "id" : "44",
           "name" : "Reporting Service",
           "properties" : {
             "structurizr.dsl.identifier" : "reporting2"
           },
           "tags" : "Element,Component"
         } ],
-        "description" : "Management UI for volunteering opportunities",
+        "description" : "Optional UI for analythics",
         "documentation" : { },
-        "id" : "40",
+        "id" : "41",
         "name" : "Organization Frontend",
         "properties" : {
           "structurizr.dsl.identifier" : "frontend2"
         },
-        "tags" : "Element,Container"
-      }, {
-        "description" : "Prepares and manages volunteering opportunities and matches for the frontend",
-        "documentation" : { },
-        "id" : "43",
-        "name" : "Opportunity Management Service",
-        "properties" : {
-          "structurizr.dsl.identifier" : "backend2"
-        },
-        "tags" : "Element,Container"
-      }, {
-        "description" : "Source of Truth for opportunities and registrations",
-        "documentation" : { },
-        "id" : "44",
-        "name" : "Local Database",
-        "properties" : {
-          "structurizr.dsl.identifier" : "database2"
-        },
         "relationships" : [ {
-          "description" : "Transforms local data",
-          "destinationId" : "48",
-          "id" : "98",
-          "sourceId" : "44",
+          "description" : "Shows requests and opportunities",
+          "destinationId" : "45",
+          "id" : "110",
+          "sourceId" : "41",
           "tags" : "Relationship"
         } ],
         "tags" : "Element,Container"
       }, {
+        "description" : "Prepares and manages volunteer requests",
+        "documentation" : { },
+        "id" : "45",
+        "name" : "Backend Service",
+        "properties" : {
+          "structurizr.dsl.identifier" : "backend2"
+        },
+        "relationships" : [ {
+          "description" : "Prepares requests and opportunities",
+          "destinationId" : "46",
+          "id" : "108",
+          "sourceId" : "45",
+          "tags" : "Relationship"
+        } ],
+        "tags" : "Element,Container"
+      }, {
+        "description" : "Source of Truth for opportunities and volunteer requests",
+        "documentation" : { },
+        "id" : "46",
+        "name" : "Local Database",
+        "properties" : {
+          "structurizr.dsl.identifier" : "database2"
+        },
+        "tags" : "Element,Container"
+      }, {
         "components" : [ {
           "documentation" : { },
-          "id" : "46",
+          "id" : "48",
           "name" : "Verifiable Credentials",
           "properties" : {
             "structurizr.dsl.identifier" : "vc2"
@@ -735,7 +861,7 @@
           "tags" : "Element,Component"
         }, {
           "documentation" : { },
-          "id" : "47",
+          "id" : "49",
           "name" : "DID Keypair",
           "properties" : {
             "structurizr.dsl.identifier" : "did2"
@@ -743,7 +869,7 @@
           "tags" : "Element,Component"
         } ],
         "documentation" : { },
-        "id" : "45",
+        "id" : "47",
         "name" : "Wallet",
         "properties" : {
           "structurizr.dsl.identifier" : "wallet2"
@@ -752,7 +878,7 @@
       }, {
         "components" : [ {
           "documentation" : { },
-          "id" : "49",
+          "id" : "51",
           "name" : "ESCO Mapping",
           "properties" : {
             "structurizr.dsl.identifier" : "esco_map2"
@@ -760,56 +886,118 @@
           "tags" : "Element,Component"
         }, {
           "documentation" : { },
-          "id" : "50",
+          "id" : "52",
           "name" : "Ontology Mapping",
           "properties" : {
             "structurizr.dsl.identifier" : "ontology_map2"
           },
+          "relationships" : [ {
+            "description" : "Matches external opportunities to defined ontology",
+            "destinationId" : "55",
+            "id" : "115",
+            "sourceId" : "52",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Stores transformed opportunities",
+            "destinationId" : "46",
+            "id" : "121",
+            "sourceId" : "52",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Matches transformed opportunities to defined competences",
+            "destinationId" : "51",
+            "id" : "123",
+            "sourceId" : "52",
+            "tags" : "Relationship"
+          } ],
           "tags" : "Element,Component"
         }, {
           "documentation" : { },
-          "id" : "51",
+          "id" : "53",
           "name" : "SHACL Validation",
           "properties" : {
             "structurizr.dsl.identifier" : "shacl2"
           },
+          "relationships" : [ {
+            "description" : "Validates transformed opportunities against defined ontology",
+            "destinationId" : "52",
+            "id" : "119",
+            "sourceId" : "53",
+            "tags" : "Relationship"
+          } ],
           "tags" : "Element,Component"
         } ],
         "documentation" : { },
-        "id" : "48",
+        "id" : "50",
         "name" : "Semantic Layer",
         "properties" : {
           "structurizr.dsl.identifier" : "semantic2"
         },
         "relationships" : [ {
-          "description" : "Provides JSON-LD assets",
-          "destinationId" : "37",
-          "id" : "100",
-          "sourceId" : "48",
+          "description" : "Provides transformed data",
+          "destinationId" : "46",
+          "id" : "102",
+          "sourceId" : "50",
           "tags" : "Relationship"
+        }, {
+          "description" : "Provides JSON-LD assets",
+          "destinationId" : "38",
+          "id" : "104",
+          "sourceId" : "50",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Matches external opportunities to defined ontology",
+          "destinationId" : "55",
+          "id" : "116",
+          "linkedRelationshipId" : "115",
+          "sourceId" : "50"
         } ],
         "tags" : "Element,Container"
       } ],
       "documentation" : { },
-      "id" : "36",
+      "id" : "37",
       "name" : "Participating Organization B",
       "properties" : {
         "structurizr.dsl.identifier" : "org2"
       },
       "relationships" : [ {
-        "description" : "Proves organisational identity",
+        "description" : "Proves organisational identity, obtains VCs",
         "destinationId" : "3",
-        "id" : "96",
-        "linkedRelationshipId" : "95",
-        "sourceId" : "36"
+        "id" : "100",
+        "linkedRelationshipId" : "99",
+        "sourceId" : "37"
+      }, {
+        "description" : "Matches external opportunities to defined ontology",
+        "destinationId" : "55",
+        "id" : "117",
+        "linkedRelationshipId" : "115",
+        "sourceId" : "37"
       } ],
       "tags" : "Element,Software System"
+    }, {
+      "description" : "External source of volunteering opportunities",
+      "documentation" : { },
+      "id" : "54",
+      "name" : "External Opportunity System A",
+      "properties" : {
+        "structurizr.dsl.identifier" : "extopt1"
+      },
+      "tags" : "Element,Software System,outofscope"
+    }, {
+      "description" : "External source of volunteering opportunities",
+      "documentation" : { },
+      "id" : "55",
+      "name" : "External Opportunity System B",
+      "properties" : {
+        "structurizr.dsl.identifier" : "extopt2"
+      },
+      "tags" : "Element,Software System,outofscope"
     } ]
   },
   "name" : "VolunSphere",
   "properties" : {
-    "structurizr.inspection.error" : "137",
-    "structurizr.dsl" : "d29ya3NwYWNlICJWb2x1blNwaGVyZSIgewoKICAgIG1vZGVsIHsKCiAgICAgICAgdm9sdW50ZWVyID0gcGVyc29uICJWb2x1bnRlZXIiIHsKICAgICAgICAgICAgZGVzY3JpcHRpb24gIlNlYXJjaGVzIGZvciB2b2x1bnRlZXJpbmcgb3Bwb3J0dW5pdGllcyBhbmQgYXBwbGllcyBmb3IgdGhlbSIKICAgICAgICB9CgogICAgICAgIG1pbmlzdHJ5ID0gc29mdHdhcmVTeXN0ZW0gIkJNU0dQSyIgewogICAgICAgICAgICBkZXNjcmlwdGlvbiAiTWluaXN0cnkgYWNjZXNzaW5nIHJlcG9ydHMsIHN0YXRpc3RpY3MgYW5kIGdvdmVybmFuY2UgZnVuY3Rpb25zIgogICAgICAgIH0KCiAgICAgICAgZ2FpYXggPSBzb2Z0d2FyZVN5c3RlbSAiR2FpYS1YIFRydXN0IEZyYW1ld29yayIgewogICAgICAgICAgICBkZXNjcmlwdGlvbiAiVHJ1c3QgZnJhbWV3b3JrIGZvciBwYXJ0aWNpcGFudCBvbmJvYXJkaW5nIGFuZCBjcmVkZW50aWFsIHZlcmlmaWNhdGlvbiIKICAgICAgICAgICAgdGFncyAib3V0b2ZzY29wZSIKICAgICAgICB9CgogICAgICAgIGV1ZGkgPSBzb2Z0d2FyZVN5c3RlbSAiRVVESSBXYWxsZXQgRWNvc3lzdGVtIiB7CiAgICAgICAgICAgIGRlc2NyaXB0aW9uICJXYWxsZXQgaW5mcmFzdHJ1Y3R1cmUgZm9yIGlkZW50aXRpZXMgYW5kIGNyZWRlbnRpYWxzIgogICAgICAgICAgICB0YWdzICJvdXRvZnNjb3BlIgogICAgICAgIH0KCiAgICAgICAgZXNjbyA9IHNvZnR3YXJlU3lzdGVtICJFU0NPIC8gQ29tcGV0ZW5jZSBGcmFtZXdvcmsiIHsKICAgICAgICAgICAgZGVzY3JpcHRpb24gIkNvbXBldGVuY2UgYW5kIHNraWxsIHZvY2FidWxhcnkiCiAgICAgICAgICAgIHRhZ3MgIm91dG9mc2NvcGUiCiAgICAgICAgfQoKICAgICAgICB2b2x1bnNwaGVyZSA9IHNvZnR3YXJlU3lzdGVtICJWb2x1blNwaGVyZSBQbGF0Zm9ybSIgewoKICAgICAgICAgICAgZnJvbnRlbmQgPSBjb250YWluZXIgIldlYiBGcm9udGVuZCIgewogICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gIk1hcmtldHBsYWNlIGFuZCB1c2VyIHBvcnRhbCIKCiAgICAgICAgICAgICAgICBtYXJrZXRwbGFjZSA9IGNvbXBvbmVudCAiTWFya2V0cGxhY2UgU2VydmljZSIgewogICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gIlNlYXJjaCwgZGlzY292ZXJ5IGFuZCByZXF1ZXN0aW5nIG9mIHZvbHVudGVlcmluZyBvcHBvcnR1bml0aWVzIgogICAgICAgICAgICB9CgogICAgICAgICAgICAgICAgY29tbXVuaXR5ID0gY29tcG9uZW50ICJDb21tdW5pdHkgU2VydmljZSIgewogICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gIk1lc3NhZ2luZyBhbmQgY29tbXVuaXR5IGZ1bmN0aW9ucyIKICAgICAgICAgICAgfQoKICAgICAgICAgICAgICAgIHNpZ25pbiA9IGNvbXBvbmVudCAiU2lnbi1JbiBTZXJ2aWNlIiB7CiAgICAgICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gIlVzZXIgYXV0aGVudGljYXRpb24gYW5kIGF1dGhvcml6YXRpb24iCiAgICAgICAgICAgICAgICB9CgogICAgICAgICAgICAgICAgcmVwb3J0aW5nID0gY29tcG9uZW50ICJSZXBvcnRpbmcgU2VydmljZSIgewogICAgICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uICJBZ2dyZWdhdGVzIGFuZCB2aXN1YWxpemVzIGRhdGEgZm9yIGdvdmVybmFuY2UgYW5kIHN0YXRpc3RpY3MiCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0KCiAgICAgICAgICAgIGRhdGFiYXNlID0gY29udGFpbmVyICJEYXRhYmFzZSIgewogICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gIlN0b3JlcyB1c2VyIGRhdGEsIG9wcG9ydHVuaXRpZXMgYW5kIHJlZ2lzdHJhdGlvbnMiCiAgICAgICAgICAgIH0KICAgICAgICAgICAgYmFja2VuZCA9IGNvbnRhaW5lciAiQmFja2VuZCBTZXJ2aWNlIiB7CiAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAiU2VydmljZSBhbmQgQVBJIGNvb3JkaW5hdGlvbmFuZCBmb3IgdGhlIGZyb250ZW5kIgoKICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgaWRlbnRpdHkgPSBjb21wb25lbnQgIklkZW50aXR5IFNlcnZpY2UiIHsKICAgICAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAiQXV0aGVudGljYXRpb24gYW5kIGNyZWRlbnRpYWwgdmVyaWZpY2F0aW9uIG9mIG9yZ2FuaXNhdGlvbnMiCiAgICAgICAgICAgICAgICB9CgogICAgICAgICAgICAgICAgY29yZSA9IGNvbXBvbmVudCAiQ29yZSBCYWNrZW5kIiB7CiAgICAgICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gIkNvbW11bmljYXRlcyB3aXRoIG90aGVyIGNvbm5lY3RvcnMsIHByZXBhcmVzIG1ldGFkYXRhIGZvciB0aGUgRnJvbnRlbmQsIGZvcndhcmRzIHJlcXVlc3RzIHRvIENvbm5lY3RvcnMiCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0KCgogICAgICAgICAgICBjb25uZWN0b3IgPSBjb250YWluZXIgIkVEQyBDb25uZWN0b3IiIHsKICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uICJDb25uZWN0b3IgZm9yIGlkZW50aXR5LCBwb2xpY3kgYW5kIG1ldGFkYXRhIGV4Y2hhbmdlLCBjcmF3bHMgbWV0YWRhdGEgZnJvbSBwYXJ0aWNpcGF0aW5nIG9yZ2FuaXphdGlvbnMiCgogICAgICAgICAgICAgICAgY29udHJvbHBsYW5lID0gY29tcG9uZW50ICJDb250cm9sIFBsYW5lIiB7CiAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAiTWFuYWdlcyBkYXRhIGV4Y2hhbmdlIGFuZCBwb2xpY3kgZW5mb3JjZW1lbnQiCiAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgIGRhdGFwbGFuZSA9IGNvbXBvbmVudCAiRGF0YSBQbGFuZSIgewogICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gIkhhbmRsZXMgZGF0YSB0cmFuc2ZlciBhbmQgdHJhbnNmb3JtYXRpb24iCiAgICAgICAgICAgIH0KICAgICAgICAgICAgfQoKCgogICAgICAgICAgICBhdWRpdCA9IGNvbnRhaW5lciAiQXVkaXQgTG9nIiB7CiAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAiU3RvcmVzIGF1ZGl0IGFuZCBnb3Zlcm5hbmNlIGV2ZW50cyIKICAgICAgICAgICAgfQogICAgICAgIH0KCiAgICAgICAgb3JnMSA9IHNvZnR3YXJlU3lzdGVtICJQYXJ0aWNpcGF0aW5nIE9yZ2FuaXphdGlvbiBBIiB7CgoKICAgICAgICAgICAgCiAgICAgICAgICAgIGNvbm5lY3RvcjEgPSBjb250YWluZXIgIkVEQyBDb25uZWN0b3IiIHsKICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uICJDb25uZWN0b3IgZm9yIGlkZW50aXR5LCBwb2xpY3kgYW5kIG1ldGFkYXRhIGV4Y2hhbmdlIgoKICAgICAgICAgICAgICAgIGNvbnRyb2xwbGFuZTEgPSBjb21wb25lbnQgIkNvbnRyb2wgUGxhbmUiIHsKICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uICJNYW5hZ2VzIGRhdGEgZXhjaGFuZ2UgYW5kIHBvbGljeSBlbmZvcmNlbWVudCIKICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgZGF0YXBsYW5lMSA9IGNvbXBvbmVudCAiRGF0YSBQbGFuZSIgewogICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gIkhhbmRsZXMgZGF0YSB0cmFuc2ZlciBhbmQgdHJhbnNmb3JtYXRpb24iCiAgICAgICAgICAgIH0KICAgICAgICAgICAgfQoKICAgICAgICAgICAgZnJvbnRlbmQxID0gY29udGFpbmVyICJPcmdhbml6YXRpb24gRnJvbnRlbmQiIHsKICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uICJNYW5hZ2VtZW50IFVJIGZvciB2b2x1bnRlZXJpbmcgb3Bwb3J0dW5pdGllcyIKCiAgICAgICAgICAgICAgICBjYXRhbG9nMSA9IGNvbXBvbmVudCAiT3Bwb3J0dW5pdHkgQ2F0YWxvZyIgewogICAgICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uICJNYW5hZ2VzIGFuZCBwdWJsaXNoZXMgdm9sdW50ZWVyaW5nIG9wcG9ydHVuaXRpZXMiCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICAKCgogICAgICAgICAgICAgICAgcmVwb3J0aW5nMSA9IGNvbXBvbmVudCAiUmVwb3J0aW5nIFNlcnZpY2UiIHsKICAgICAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAiQWdncmVnYXRlcyBhbmQgdmlzdWFsaXplcyBkYXRhIGZvciBnb3Zlcm5hbmNlIGFuZCBzdGF0aXN0aWNzIgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAKICAgICAgICAgICAgCiAgICAgICAgICAgIH0KCiAgICAgICAgICAgIGJhY2tlbmQxID0gY29udGFpbmVyICJPcHBvcnR1bml0eSBNYW5hZ2VtZW50IFNlcnZpY2UiIHsKICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uICJQcmVwYXJlcyBhbmQgbWFuYWdlcyB2b2x1bnRlZXJpbmcgb3Bwb3J0dW5pdGllcyBhbmQgbWF0Y2hlcyBmb3IgdGhlIGZyb250ZW5kIgogICAgICAgICAgICB9CgogICAgICAgICAgICBkYXRhYmFzZTEgPSBjb250YWluZXIgIkxvY2FsIERhdGFiYXNlIiB7CiAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAiU291cmNlIG9mIFRydXRoIGZvciBvcHBvcnR1bml0aWVzIGFuZCByZWdpc3RyYXRpb25zIgogICAgICAgICAgICB9CgogICAgICAgICAgICB3YWxsZXQxID0gY29udGFpbmVyICJXYWxsZXQiIHsKCiAgICAgICAgICAgICAgICB2YzEgPSBjb21wb25lbnQgIlZlcmlmaWFibGUgQ3JlZGVudGlhbHMiCgogICAgICAgICAgICAgICAgZGlkMSA9IGNvbXBvbmVudCAiRElEIEtleXBhaXIiCiAgICAgICAgICAgIH0KCiAgICAgICAgICAgIHNlbWFudGljMSA9IGNvbnRhaW5lciAiU2VtYW50aWMgTGF5ZXIiIHsKCiAgICAgICAgICAgICAgICBlc2NvX21hcDEgPSBjb21wb25lbnQgIkVTQ08gTWFwcGluZyIKCiAgICAgICAgICAgICAgICBvbnRvbG9neV9tYXAxID0gY29tcG9uZW50ICJPbnRvbG9neSBNYXBwaW5nIgoKICAgICAgICAgICAgICAgIHNoYWNsMSA9IGNvbXBvbmVudCAiU0hBQ0wgVmFsaWRhdGlvbiIKICAgICAgICAgICAgfQogICAgICAgIH0KCiAgICAgICAgICAgICAgIG9yZzIgPSBzb2Z0d2FyZVN5c3RlbSAiUGFydGljaXBhdGluZyBPcmdhbml6YXRpb24gQiIgewoKCiAgICAgICAgICAgIAogICAgICAgICAgICBjb25uZWN0b3IyID0gY29udGFpbmVyICJFREMgQ29ubmVjdG9yIiB7CiAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAiQ29ubmVjdG9yIGZvciBpZGVudGl0eSwgcG9saWN5IGFuZCBtZXRhZGF0YSBleGNoYW5nZSIKCiAgICAgICAgICAgICAgICBjb250cm9scGxhbmUyID0gY29tcG9uZW50ICJDb250cm9sIFBsYW5lIiB7CiAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAiTWFuYWdlcyBkYXRhIGV4Y2hhbmdlIGFuZCBwb2xpY3kgZW5mb3JjZW1lbnQiCiAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgIGRhdGFwbGFuZTIgPSBjb21wb25lbnQgIkRhdGEgUGxhbmUiIHsKICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uICJIYW5kbGVzIGRhdGEgdHJhbnNmZXIgYW5kIHRyYW5zZm9ybWF0aW9uIgogICAgICAgICAgICB9CiAgICAgICAgICAgIH0KCiAgICAgICAgICAgIGZyb250ZW5kMiA9IGNvbnRhaW5lciAiT3JnYW5pemF0aW9uIEZyb250ZW5kIiB7CiAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAiTWFuYWdlbWVudCBVSSBmb3Igdm9sdW50ZWVyaW5nIG9wcG9ydHVuaXRpZXMiCgogICAgICAgICAgICAgICAgY2F0YWxvZzIgPSBjb21wb25lbnQgIk9wcG9ydHVuaXR5IENhdGFsb2ciIHsKICAgICAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAiTWFuYWdlcyBhbmQgcHVibGlzaGVzIHZvbHVudGVlcmluZyBvcHBvcnR1bml0aWVzIgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgCgoKICAgICAgICAgICAgICAgIHJlcG9ydGluZzIgPSBjb21wb25lbnQgIlJlcG9ydGluZyBTZXJ2aWNlIiB7CiAgICAgICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gIkFnZ3JlZ2F0ZXMgYW5kIHZpc3VhbGl6ZXMgZGF0YSBmb3IgZ292ZXJuYW5jZSBhbmQgc3RhdGlzdGljcyIKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgCiAgICAgICAgICAgIAogICAgICAgICAgICB9CgogICAgICAgICAgICBiYWNrZW5kMiA9IGNvbnRhaW5lciAiT3Bwb3J0dW5pdHkgTWFuYWdlbWVudCBTZXJ2aWNlIiB7CiAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAiUHJlcGFyZXMgYW5kIG1hbmFnZXMgdm9sdW50ZWVyaW5nIG9wcG9ydHVuaXRpZXMgYW5kIG1hdGNoZXMgZm9yIHRoZSBmcm9udGVuZCIKICAgICAgICAgICAgfQoKICAgICAgICAgICAgZGF0YWJhc2UyID0gY29udGFpbmVyICJMb2NhbCBEYXRhYmFzZSIgewogICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gIlNvdXJjZSBvZiBUcnV0aCBmb3Igb3Bwb3J0dW5pdGllcyBhbmQgcmVnaXN0cmF0aW9ucyIKICAgICAgICAgICAgfQoKICAgICAgICAgICAgd2FsbGV0MiA9IGNvbnRhaW5lciAiV2FsbGV0IiB7CgogICAgICAgICAgICAgICAgdmMyID0gY29tcG9uZW50ICJWZXJpZmlhYmxlIENyZWRlbnRpYWxzIgoKICAgICAgICAgICAgICAgIGRpZDIgPSBjb21wb25lbnQgIkRJRCBLZXlwYWlyIgogICAgICAgICAgICB9CgogICAgICAgICAgICBzZW1hbnRpYzIgPSBjb250YWluZXIgIlNlbWFudGljIExheWVyIiB7CgogICAgICAgICAgICAgICAgZXNjb19tYXAyID0gY29tcG9uZW50ICJFU0NPIE1hcHBpbmciCgogICAgICAgICAgICAgICAgb250b2xvZ3lfbWFwMiA9IGNvbXBvbmVudCAiT250b2xvZ3kgTWFwcGluZyIKCiAgICAgICAgICAgICAgICBzaGFjbDIgPSBjb21wb25lbnQgIlNIQUNMIFZhbGlkYXRpb24iCiAgICAgICAgICAgIH0KICAgICAgICB9CgogICAgICAgIAogICAgICAgICMgUmVsYXRpb25zCgogICAgICAgIHZvbHVudGVlciAtPiBmcm9udGVuZCAiU2VhcmNoZXMgYW5kIGFwcGxpZXMgZm9yIG9wcG9ydHVuaXRpZXMiIEhUVFBTCiAgICAgICAgdm9sdW50ZWVyIC0+IGV1ZGkgIlN0b3JlcyBpZGVudGl0eSBhbmQgY2VydGlmaWNhdGVzIgogICAgICAgIHZvbHVudGVlciAtPiBzaWduaW4gIkF1dGhlbnRpY2F0ZXMgYW5kIGF1dGhvcml6ZXMiIEhUVFBTCiAgICAgICAgdm9sdW50ZWVyIC0+IG1hcmtldHBsYWNlICJTZWFyY2hlcyBhbmQgcmVxdWVzdHMgb3Bwb3J0dW5pdGllcyIgSFRUUFMKICAgICAgICB2b2x1bnRlZXIgLT4gY29tbXVuaXR5ICJDaGF0cyB3aXRoIGluIGNvbW11bml0eSIgSFRUUFMKICAgICAgICBiYWNrZW5kIC0+IGNvbm5lY3RvciAiQ29ubmVjdHMgdG8gZmVkZXJhdGVkIGNhdGFsb2cgZW5kcG9pbnQiCiAgICAgICAgYmFja2VuZCAtPiBtYXJrZXRwbGFjZSAiUHJlcGFyZXMgYW5kIHByb3ZpZGVzIG1ldGFkYXRhIGZvciBvcHBvcnR1bml0aWVzIgogICAgICAgIHNpZ25pbiAtPiBkYXRhYmFzZSAiU2VuZHMgYW5kIHN0b3JlcyByZWdpc3RyYXRpb24gZGF0YSBvZiB2b2x1bnRlZXJzIgogICAgICAgIG1hcmtldHBsYWNlIC0+IGNvcmUgIkZvcndhcmRzIHJlcXVlc3RzIgogICAgICAgIGNvcmUgLT4gbWFya2V0cGxhY2UgIlByb3ZpZGVzIG1ldGFkYXRhIGZvciBvcHBvcnR1bml0aWVzIgogICAgICAgIGNvcmUgLT4gY29udHJvbHBsYW5lICJSZWNlaXZlcyBhbmQgZm9yd2FyZHMgcmVxdWVzdHMgdG8gY29ubmVjdG9yIgogICAgICAgIGNvcmUgLT4gZGF0YXBsYW5lICJSZWNlaXZlcyBhbmQgZm9yd2FyZHMgcmVxdWVzdGVkIGRhdGEgdG8gY29ubmVjdG9yIgogICAgICAgIGNvcmUgLT4gZGF0YWJhc2UgIkZvcndhcmRzIHJlZ2lzdHJhdGlvbiBkYXRhIG9mIHZvbHVudGVlcnMgZm9yIHJlcXVlc3RzIgogICAgICAgIG1pbmlzdHJ5IC0+IHJlcG9ydGluZyAiUGVyZm9ybXMgYW5kIHZpZXdzIHJlcG9ydHMiCiAgICAgICAgbWluaXN0cnkgLT4gc2lnbmluICJBdXRoZW50aWNhdGVzIGFuZCBhdXRob3JpemVzIiBIVFRQUwogICAgICAgIG1pbmlzdHJ5IC0+IGRhdGFiYXNlICJTZW5kcyBhbmQgc3RvcmVzIHJlZ2lzdHJhdGlvbiBkYXRhIG9mIG1pbmlzdHJ5IgogICAgICAgIGNvbm5lY3RvciAtPiBjb25uZWN0b3IxICJDcmF3bHMgbWV0YWRhdGEiIEVEQwogICAgICAgIGNvbm5lY3RvciAtPiBjb25uZWN0b3IyICJDcmF3bHMgbWV0YWRhdGEiIEVEQwogICAgICAgIGNvbm5lY3RvcjEgLT4gZGF0YWJhc2UxICJBY2Nlc3NlcyBvcHBvcnR1bml0aWVzIgogICAgICAgIGNvbm5lY3RvcjIgLT4gZGF0YWJhc2UyICJBY2Nlc3NlcyBvcHBvcnR1bml0aWVzIgogICAgICAgIGNvbm5lY3RvcjEgLT4gd2FsbGV0MSAiQWNjZXNzIG9yZ2FuaXNhdGlvbmFsIGNyZWRlbnRpYWxzIgogICAgICAgIGNvbm5lY3RvcjIgLT4gd2FsbGV0MiAiQWNjZXNzIG9yZ2FuaXNhdGlvbmFsIGNyZWRlbnRpYWxzIgogICAgICAgIGNvbm5lY3RvcjEgLT4gZ2FpYXggIlByb3ZlcyBvcmdhbmlzYXRpb25hbCBpZGVudGl0eSIKICAgICAgICBjb25uZWN0b3IyIC0+IGdhaWF4ICJQcm92ZXMgb3JnYW5pc2F0aW9uYWwgaWRlbnRpdHkiCiAgICAgICAgZGF0YWJhc2UxIC0+IHNlbWFudGljMSAiVHJhbnNmb3JtcyBsb2NhbCBkYXRhIgoKICAgICAgICBkYXRhYmFzZTIgLT4gc2VtYW50aWMyICJUcmFuc2Zvcm1zIGxvY2FsIGRhdGEiCiAgICAgICAgc2VtYW50aWMxIC0+IGNvbm5lY3RvcjEgIlByb3ZpZGVzIEpTT04tTEQgYXNzZXRzIgogICAgICAgIHNlbWFudGljMiAtPiBjb25uZWN0b3IyICJQcm92aWRlcyBKU09OLUxEIGFzc2V0cyIKCiAgICAgICAgYmFja2VuZCAtPiBhdWRpdCAiV3JpdGVzIGF1ZGl0IGV2ZW50cyIKCiAgICAgICAgc2lnbmluIC0+IGF1ZGl0ICJXcml0ZXMgYXV0aGVudGljYXRpb24gZXZlbnRzIgogICAgfQoKICAgIHZpZXdzIHsKCiAgICAgICAgc3lzdGVtTGFuZHNjYXBlIHZvbHVuc3BoZXJlIHsKICAgICAgICAgICAgdGl0bGUgIlZvbHVuU3BoZXJlIFN5c3RlbSBMYW5kc2NhcGUiCiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgICAgICBhdXRvTGF5b3V0IHRiCiAgICAgICAgfQoKICAgICAgICBjb250YWluZXIgdm9sdW5zcGhlcmUgewogICAgICAgICAgICB0aXRsZSAiVm9sdW5TcGhlcmUgUGxhdGZvcm0gQ29udGFpbmVycyIKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgICAgIGF1dG9MYXlvdXQgdGIKICAgICAgICB9CgogICAgICAgIGNvbnRhaW5lciBvcmcxIHsKICAgICAgICAgICAgdGl0bGUgIlBhcnRpY2lwYXRpbmcgT3JnYW5pemF0aW9uIgogICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICAgICAgYXV0b0xheW91dCB0YgogICAgICAgIH0KCiAgICAgICAgY29udGFpbmVyIG9yZzIgewogICAgICAgICAgICB0aXRsZSAiUGFydGljaXBhdGluZyBPcmdhbml6YXRpb24iCiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgICAgICBhdXRvTGF5b3V0IHRiCiAgICAgICAgfQoKICAgICAgICBjb21wb25lbnQgZnJvbnRlbmQgewogICAgICAgICAgICB0aXRsZSAiVm9sdW5TcGhlcmUgRnJvbnRlbmQgQ29tcG9uZW50cyIKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgICAgIGF1dG9MYXlvdXQgdGIKICAgICAgICB9CgogICAgICAgIGNvbXBvbmVudCBiYWNrZW5kIHsKICAgICAgICAgICAgdGl0bGUgIlZvbHVuU3BoZXJlIEJhY2tlbmQgQ29tcG9uZW50cyIKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgICAgIGF1dG9MYXlvdXQgdGIKICAgICAgICB9CiAgICAgICAgIGNvbXBvbmVudCBjb25uZWN0b3IgewogICAgICAgICAgICB0aXRsZSAiVm9sdW5TcGhlcmUgQ29ubmVjdG9yIENvbXBvbmVudHMiCiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgICAgICBhdXRvTGF5b3V0IHRiCiAgICAgICAgIH0KICAgICAgICAgY29tcG9uZW50IGNvbm5lY3RvcjEgewogICAgICAgICAgICB0aXRsZSAiUGFydGljaXBhdGluZyBPcmdhbml6YXRpb24gQ29ubmVjdG9yIENvbXBvbmVudHMiCiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgICAgICBhdXRvTGF5b3V0IHRiCiAgICAgICAgIH0KICAgICAgICAgICAgY29tcG9uZW50IGNvbm5lY3RvcjIgewogICAgICAgICAgICAgICAgdGl0bGUgIlBhcnRpY2lwYXRpbmcgT3JnYW5pemF0aW9uIENvbm5lY3RvciBDb21wb25lbnRzIgogICAgICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgICAgICAgICBhdXRvTGF5b3V0IHRiCiAgICAgICAgICAgIH0KCiAgICAgICAgICAgIGNvbXBvbmVudCBzZW1hbnRpYzEgewogICAgICAgICAgICAgICAgdGl0bGUgIlBhcnRpY2lwYXRpbmcgT3JnYW5pemF0aW9uIFNlbWFudGljIExheWVyIENvbXBvbmVudHMiCiAgICAgICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICAgICAgICAgIGF1dG9MYXlvdXQgdGIKICAgICAgICAgICAgfQogICAgICAgICAgICBjb21wb25lbnQgc2VtYW50aWMyIHsKICAgICAgICAgICAgICAgIHRpdGxlICJQYXJ0aWNpcGF0aW5nIE9yZ2FuaXphdGlvbiBTZW1hbnRpYyBMYXllciBDb21wb25lbnRzIgogICAgICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgICAgICAgICBhdXRvTGF5b3V0IHRiCiAgICAgICAgICAgIH0KICAgICAgICAgICAgY29tcG9uZW50IGZyb250ZW5kMSB7CiAgICAgICAgICAgICAgICB0aXRsZSAiUGFydGljaXBhdGluZyBPcmdhbml6YXRpb24gRnJvbnRlbmQgQ29tcG9uZW50cyIKICAgICAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgICAgICAgICAgYXV0b0xheW91dCB0YgogICAgICAgICAgICB9CiAgICAgICAgICAgIGNvbXBvbmVudCBmcm9udGVuZDIgewogICAgICAgICAgICAgICAgdGl0bGUgIlBhcnRpY2lwYXRpbmcgT3JnYW5pemF0aW9uIEZyb250ZW5kIENvbXBvbmVudHMiCiAgICAgICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICAgICAgICAgIGF1dG9MYXlvdXQgdGIKICAgICAgICAgICAgfQogICAgICAgICAgICBjb21wb25lbnQgYmFja2VuZDEgewogICAgICAgICAgICAgICAgdGl0bGUgIlBhcnRpY2lwYXRpbmcgT3JnYW5pemF0aW9uIEJhY2tlbmQgQ29tcG9uZW50cyIKICAgICAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgICAgICAgICAgYXV0b0xheW91dCB0YgogICAgICAgICAgICB9CiAgICAgICAgICAgIGNvbXBvbmVudCBiYWNrZW5kMiB7CiAgICAgICAgICAgICAgICB0aXRsZSAiUGFydGljaXBhdGluZyBPcmdhbml6YXRpb24gQmFja2VuZCBDb21wb25lbnRzIgogICAgICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgICAgICAgICBhdXRvTGF5b3V0IHRiCiAgICAgICAgICAgIH0KICAgICAgICAgICAgY29tcG9uZW50IGRhdGFiYXNlMSB7CiAgICAgICAgICAgICAgICB0aXRsZSAiUGFydGljaXBhdGluZyBPcmdhbml6YXRpb24gRGF0YWJhc2UgQ29tcG9uZW50cyIKICAgICAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgICAgICAgICAgYXV0b0xheW91dCB0YgogICAgICAgICAgICB9CiAgICAgICAgICAgIGNvbXBvbmVudCBkYXRhYmFzZTIgewogICAgICAgICAgICAgICAgdGl0bGUgIlBhcnRpY2lwYXRpbmcgT3JnYW5pemF0aW9uIERhdGFiYXNlIENvbXBvbmVudHMiCiAgICAgICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICAgICAgICAgIGF1dG9MYXlvdXQgdGIKICAgICAgICAgICAgfQogICAgICAgICAgICBjb21wb25lbnQgd2FsbGV0MSB7CiAgICAgICAgICAgICAgICB0aXRsZSAiUGFydGljaXBhdGluZyBPcmdhbml6YXRpb24gV2FsbGV0IENvbXBvbmVudHMiCiAgICAgICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICAgICAgICAgIGF1dG9MYXlvdXQgdGIKICAgICAgICAgICAgfQogICAgICAgICAgICBjb21wb25lbnQgd2FsbGV0MiB7CiAgICAgICAgICAgICAgICB0aXRsZSAiUGFydGljaXBhdGluZyBPcmdhbml6YXRpb24gV2FsbGV0IENvbXBvbmVudHMiCiAgICAgICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICAgICAgICAgIGF1dG9MYXlvdXQgdGIKICAgICAgICAgICAgfQogICAgICAgIAogICAgICAgIAoKICAgICAgICB0aGVtZSBkZWZhdWx0CgogICAgICAgIHN0eWxlcyB7CgogICAgICAgICAgICBlbGVtZW50ICJQZXJzb24iIHsKICAgICAgICAgICAgICAgIHNoYXBlIFBlcnNvbgogICAgICAgICAgICB9CgogICAgICAgICAgICBlbGVtZW50ICJQb2xpY3kiIHsKICAgICAgICAgICAgICAgIHNoYXBlIEZvbGRlcgogICAgICAgICAgICAgICAgYmFja2dyb3VuZCAjRTQwODBBCiAgICAgICAgICAgIH0KCiAgICAgICAgICAgIGVsZW1lbnQgIm91dG9mc2NvcGUiIHsKICAgICAgICAgICAgICAgIGJhY2tncm91bmQgIzk5OTk5OQogICAgICAgICAgICB9CgogICAgICAgICAgICBlbGVtZW50ICJXZWIgQXBwbGljYXRpb24iIHsKICAgICAgICAgICAgICAgIHNoYXBlIFdlYkJyb3dzZXIKICAgICAgICAgICAgfQogICAgICAgIH0KICAgIH0KfQ==",
+    "structurizr.inspection.error" : "151",
+    "structurizr.dsl" : "d29ya3NwYWNlICJWb2x1blNwaGVyZSIgewoKICAgIG1vZGVsIHsKCiAgICAgICAgdm9sdW50ZWVyID0gcGVyc29uICJWb2x1bnRlZXIiIHsKICAgICAgICAgICAgZGVzY3JpcHRpb24gIlNlYXJjaGVzIGZvciB2b2x1bnRlZXJpbmcgb3Bwb3J0dW5pdGllcyBhbmQgYXBwbGllcyBmb3IgdGhlbSIKICAgICAgICB9CgogICAgICAgIG1pbmlzdHJ5ID0gc29mdHdhcmVTeXN0ZW0gIkJNQVNHUEsiIHsKICAgICAgICAgICAgZGVzY3JpcHRpb24gIk1pbmlzdHJ5IGFjY2Vzc2luZyByZXBvcnRzLCBzdGF0aXN0aWNzIGFuZCBnb3Zlcm5hbmNlIGZ1bmN0aW9ucyIKICAgICAgICB9CgogICAgICAgIGdhaWF4ID0gc29mdHdhcmVTeXN0ZW0gIkdhaWEtWCBUcnVzdCBGcmFtZXdvcmsiIHsKICAgICAgICAgICAgZGVzY3JpcHRpb24gIlRydXN0IGZyYW1ld29yayBmb3Igb3JnYW5pc2F0aW9uIG9uYm9hcmRpbmcgYW5kIGNyZWRlbnRpYWwgdmVyaWZpY2F0aW9uIgogICAgICAgICAgICB0YWdzICJvdXRvZnNjb3BlIgogICAgICAgIH0KCiAgICAgICAgZXVkaSA9IHNvZnR3YXJlU3lzdGVtICJFVURJIFdhbGxldCBFY29zeXN0ZW0iIHsKICAgICAgICAgICAgZGVzY3JpcHRpb24gIldhbGxldCBpbmZyYXN0cnVjdHVyZSBmb3IgaWRlbnRpdGllcyBhbmQgY3JlZGVudGlhbHMiCiAgICAgICAgICAgIHRhZ3MgIm91dG9mc2NvcGUiCiAgICAgICAgfQoKICAgICAgICBlc2NvID0gc29mdHdhcmVTeXN0ZW0gIkVTQ08gLyBDb21wZXRlbmNlIEZyYW1ld29yayIgewogICAgICAgICAgICBkZXNjcmlwdGlvbiAiQ29tcGV0ZW5jZSBhbmQgc2tpbGwgdm9jYWJ1bGFyeSIKICAgICAgICAgICAgdGFncyAib3V0b2ZzY29wZSIKICAgICAgICB9CgogICAgICAgIHZvbHVuc3BoZXJlID0gc29mdHdhcmVTeXN0ZW0gIlBsYXR0Zm9ybSBEaWdpdGFsZXIgRldQIiB7CgogICAgICAgICAgICBmcm9udGVuZCA9IGNvbnRhaW5lciAiV2ViIEZyb250ZW5kIiB7CiAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAiTWFya2V0cGxhY2UgYW5kIHVzZXIgcG9ydGFsIgoKICAgICAgICAgICAgICAgIG1hcmtldHBsYWNlID0gY29tcG9uZW50ICJNYXJrZXRwbGFjZSBTZXJ2aWNlIiB7CiAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAiU2VhcmNoLCBkaXNjb3ZlcnkgYW5kIHJlcXVlc3Rpbmcgb2Ygdm9sdW50ZWVyaW5nIG9wcG9ydHVuaXRpZXMiCiAgICAgICAgICAgIH0KCiAgICAgICAgICAgICAgICBjb21tdW5pdHkgPSBjb21wb25lbnQgIkNvbW11bml0eSBTZXJ2aWNlIiB7CiAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAiTWVzc2FnaW5nIGFuZCBjb21tdW5pdHkgZnVuY3Rpb25zIgogICAgICAgICAgICB9CgogICAgICAgICAgICAgICAgc2lnbmluID0gY29tcG9uZW50ICJTaWduLUluIFNlcnZpY2UiIHsKICAgICAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAiVXNlciBhdXRoZW50aWNhdGlvbiBhbmQgYXV0aG9yaXphdGlvbiIKICAgICAgICAgICAgICAgIH0KCiAgICAgICAgICAgICAgICByZXBvcnRpbmcgPSBjb21wb25lbnQgIlJlcG9ydGluZyBTZXJ2aWNlIiB7CiAgICAgICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gIkFnZ3JlZ2F0ZXMgYW5kIHZpc3VhbGl6ZXMgZGF0YSBmb3IgZ292ZXJuYW5jZSBhbmQgc3RhdGlzdGljcyIKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfQoKICAgICAgICAgICAgZGF0YWJhc2UgPSBjb250YWluZXIgIkRhdGFiYXNlIiB7CiAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAiU3RvcmVzIHVzZXIgZGF0YSwgb3Bwb3J0dW5pdGllcyBhbmQgcmVnaXN0cmF0aW9ucyIKICAgICAgICAgICAgfQogICAgICAgICAgICBiYWNrZW5kID0gY29udGFpbmVyICJCYWNrZW5kIFNlcnZpY2UiIHsKICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uICJTZXJ2aWNlIGFuZCBBUEkgY29vcmRpbmF0aW9uYW5kIGZvciB0aGUgZnJvbnRlbmQiCgogICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICBpZGVudGl0eSA9IGNvbXBvbmVudCAiSWRlbnRpdHkgU2VydmljZSIgewogICAgICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uICJBdXRoZW50aWNhdGlvbiBhbmQgY3JlZGVudGlhbCB2ZXJpZmljYXRpb24gb2Ygb3JnYW5pc2F0aW9ucyIKICAgICAgICAgICAgICAgIH0KCiAgICAgICAgICAgICAgICBjb3JlID0gY29tcG9uZW50ICJDb3JlIEJhY2tlbmQiIHsKICAgICAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAiQ29tbXVuaWNhdGVzIHdpdGggb3RoZXIgY29ubmVjdG9ycywgcHJlcGFyZXMgbWV0YWRhdGEgZm9yIHRoZSBGcm9udGVuZCwgZm9yd2FyZHMgcmVxdWVzdHMgdG8gQ29ubmVjdG9ycyIKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfQoKCiAgICAgICAgICAgIGNvbm5lY3RvciA9IGNvbnRhaW5lciAiRURDIENvbm5lY3RvciIgewogICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gIkNvbm5lY3RvciBmb3IgaWRlbnRpdHksIHBvbGljeSBhbmQgbWV0YWRhdGEgZXhjaGFuZ2UsIGNyYXdscyBtZXRhZGF0YSBmcm9tIHBhcnRpY2lwYXRpbmcgb3JnYW5pemF0aW9ucyIKCiAgICAgICAgICAgICAgICBjb250cm9scGxhbmUgPSBjb21wb25lbnQgIkNvbnRyb2wgUGxhbmUiIHsKICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uICJNYW5hZ2VzIGRhdGEgZXhjaGFuZ2UgYW5kIHBvbGljeSBlbmZvcmNlbWVudCIKICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgZGF0YXBsYW5lID0gY29tcG9uZW50ICJEYXRhIFBsYW5lIiB7CiAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAiSGFuZGxlcyBkYXRhIHRyYW5zZmVyIGFuZCB0cmFuc2Zvcm1hdGlvbiIKICAgICAgICAgICAgfQogICAgICAgICAgICB9CgoKCiAgICAgICAgICAgIGF1ZGl0ID0gY29udGFpbmVyICJBdWRpdCBMb2ciIHsKICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uICJTdG9yZXMgYXVkaXQgYW5kIGdvdmVybmFuY2UgZXZlbnRzIgogICAgICAgICAgICB9CiAgICAgICAgfQoKICAgICAgICBvcmcxID0gc29mdHdhcmVTeXN0ZW0gIlBhcnRpY2lwYXRpbmcgT3JnYW5pemF0aW9uIEEiIHsKCgogICAgICAgICAgICAKICAgICAgICAgICAgY29ubmVjdG9yMSA9IGNvbnRhaW5lciAiRURDIENvbm5lY3RvciIgewogICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gIkNvbm5lY3RvciBmb3IgaWRlbnRpdHksIHBvbGljeSBhbmQgbWV0YWRhdGEgZXhjaGFuZ2UiCgogICAgICAgICAgICAgICAgY29udHJvbHBsYW5lMSA9IGNvbXBvbmVudCAiQ29udHJvbCBQbGFuZSIgewogICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gIk1hbmFnZXMgZGF0YSBleGNoYW5nZSBhbmQgcG9saWN5IGVuZm9yY2VtZW50IgogICAgICAgICAgICB9CiAgICAgICAgICAgICAgICBkYXRhcGxhbmUxID0gY29tcG9uZW50ICJEYXRhIFBsYW5lIiB7CiAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAiSGFuZGxlcyBkYXRhIHRyYW5zZmVyIGFuZCB0cmFuc2Zvcm1hdGlvbiIKICAgICAgICAgICAgfQogICAgICAgICAgICB9CiAgICAgICAgICAgIGZyb250ZW5kMSA9IGNvbnRhaW5lciAiT3JnYW5pemF0aW9uIEZyb250ZW5kIiB7CiAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAiT3B0aW9uYWwgVUkgZm9yIGFuYWx5dGhpY3MiCgogICAgICAgICAgICAgICAgbG9naW4xID0gY29tcG9uZW50ICJMb2dpbiBTZXJ2aWNlIiB7CiAgICAgICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gIkF1dGhlbnRpY2F0ZXMgYW5kIGF1dGhvcml6ZXMgdXNlcnMiCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICBjYXRhbG9nMSA9IGNvbXBvbmVudCAiVUkiIHsKICAgICAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAiSW50ZXJhY3RpdmUgVUkgZm9yIG1hbmFnaW5nIHJlcXVlc3RzIG9mIHZvbHVudGVlcnMiCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICByZXBvcnRpbmcxID0gY29tcG9uZW50ICJSZXBvcnRpbmcgU2VydmljZSIgewogICAgICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uICJBZ2dyZWdhdGVzIGFuZCB2aXN1YWxpemVzIGRhdGEgZm9yIGdvdmVybmFuY2UgYW5kIHN0YXRpc3RpY3MiCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIAogICAgICAgICAgICAKICAgICAgICAgICAgfQoKICAgICAgICAgICAgYmFja2VuZDEgPSBjb250YWluZXIgIkJhY2tlbmQgU2VydmljZSIgewogICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gIlByZXBhcmVzIGFuZCBtYW5hZ2VzIHZvbHVudGVlciByZXF1ZXN0cyIKICAgICAgICAgICAgfQoKICAgICAgICAgICAgZGF0YWJhc2UxID0gY29udGFpbmVyICJMb2NhbCBEYXRhYmFzZSIgewogICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gIlNvdXJjZSBvZiBUcnV0aCBmb3Igb3Bwb3J0dW5pdGllcyBhbmQgdm9sdW50ZWVyIHJlcXVlc3RzIgogICAgICAgICAgICB9CgogICAgICAgICAgICB3YWxsZXQxID0gY29udGFpbmVyICJXYWxsZXQiIHsKCiAgICAgICAgICAgICAgICB2YzEgPSBjb21wb25lbnQgIlZlcmlmaWFibGUgQ3JlZGVudGlhbHMiCgogICAgICAgICAgICAgICAgZGlkMSA9IGNvbXBvbmVudCAiRElEIEtleXBhaXIiCiAgICAgICAgICAgIH0KCiAgICAgICAgICAgIHNlbWFudGljMSA9IGNvbnRhaW5lciAiU2VtYW50aWMgTGF5ZXIiIHsKCiAgICAgICAgICAgICAgICBlc2NvX21hcDEgPSBjb21wb25lbnQgIkVTQ08gTWFwcGluZyIKCiAgICAgICAgICAgICAgICBvbnRvbG9neV9tYXAxID0gY29tcG9uZW50ICJPbnRvbG9neSBNYXBwaW5nIgoKICAgICAgICAgICAgICAgIHNoYWNsMSA9IGNvbXBvbmVudCAiU0hBQ0wgVmFsaWRhdGlvbiIKICAgICAgICAgICAgfQogICAgICAgIH0KCiAgICBvcmcyID0gc29mdHdhcmVTeXN0ZW0gIlBhcnRpY2lwYXRpbmcgT3JnYW5pemF0aW9uIEIiIHsKCgogICAgICAgICAgICAKICAgICAgICAgICAgY29ubmVjdG9yMiA9IGNvbnRhaW5lciAiRURDIENvbm5lY3RvciIgewogICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gIkNvbm5lY3RvciBmb3IgaWRlbnRpdHksIHBvbGljeSBhbmQgbWV0YWRhdGEgZXhjaGFuZ2UiCgogICAgICAgICAgICAgICAgY29udHJvbHBsYW5lMiA9IGNvbXBvbmVudCAiQ29udHJvbCBQbGFuZSIgewogICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gIk1hbmFnZXMgZGF0YSBleGNoYW5nZSBhbmQgcG9saWN5IGVuZm9yY2VtZW50IgogICAgICAgICAgICB9CiAgICAgICAgICAgICAgICBkYXRhcGxhbmUyID0gY29tcG9uZW50ICJEYXRhIFBsYW5lIiB7CiAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAiSGFuZGxlcyBkYXRhIHRyYW5zZmVyIGFuZCB0cmFuc2Zvcm1hdGlvbiIKICAgICAgICAgICAgfQogICAgICAgICAgICB9CgogICAgICAgICAgICBmcm9udGVuZDIgPSBjb250YWluZXIgIk9yZ2FuaXphdGlvbiBGcm9udGVuZCIgewogICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gIk9wdGlvbmFsIFVJIGZvciBhbmFseXRoaWNzIgoKICAgICAgICAgICAgICAgIGxvZ2luMiA9IGNvbXBvbmVudCAiTG9naW4gU2VydmljZSIgewogICAgICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uICJBdXRoZW50aWNhdGVzIGFuZCBhdXRob3JpemVzIHVzZXJzIgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgY2F0YWxvZzIgPSBjb21wb25lbnQgIlVJIiB7CiAgICAgICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gIkludGVyYWN0aXZlIFVJIGZvciBtYW5hZ2luZyByZXF1ZXN0cyBvZiB2b2x1bnRlZXJzIgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgcmVwb3J0aW5nMiA9IGNvbXBvbmVudCAiUmVwb3J0aW5nIFNlcnZpY2UiIHsKICAgICAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAiQWdncmVnYXRlcyBhbmQgdmlzdWFsaXplcyBkYXRhIGZvciBnb3Zlcm5hbmNlIGFuZCBzdGF0aXN0aWNzIgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAKICAgICAgICAgICAgCiAgICAgICAgICAgIH0KCiAgICAgICAgICAgIGJhY2tlbmQyID0gY29udGFpbmVyICJCYWNrZW5kIFNlcnZpY2UiIHsKICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uICJQcmVwYXJlcyBhbmQgbWFuYWdlcyB2b2x1bnRlZXIgcmVxdWVzdHMiCiAgICAgICAgICAgIH0KCiAgICAgICAgICAgIGRhdGFiYXNlMiA9IGNvbnRhaW5lciAiTG9jYWwgRGF0YWJhc2UiIHsKICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uICJTb3VyY2Ugb2YgVHJ1dGggZm9yIG9wcG9ydHVuaXRpZXMgYW5kIHZvbHVudGVlciByZXF1ZXN0cyIKICAgICAgICAgICAgfQoKICAgICAgICAgICAgd2FsbGV0MiA9IGNvbnRhaW5lciAiV2FsbGV0IiB7CgogICAgICAgICAgICAgICAgdmMyID0gY29tcG9uZW50ICJWZXJpZmlhYmxlIENyZWRlbnRpYWxzIgoKICAgICAgICAgICAgICAgIGRpZDIgPSBjb21wb25lbnQgIkRJRCBLZXlwYWlyIgogICAgICAgICAgICB9CgogICAgICAgICAgICBzZW1hbnRpYzIgPSBjb250YWluZXIgIlNlbWFudGljIExheWVyIiB7CgogICAgICAgICAgICAgICAgZXNjb19tYXAyID0gY29tcG9uZW50ICJFU0NPIE1hcHBpbmciCgogICAgICAgICAgICAgICAgb250b2xvZ3lfbWFwMiA9IGNvbXBvbmVudCAiT250b2xvZ3kgTWFwcGluZyIKCiAgICAgICAgICAgICAgICBzaGFjbDIgPSBjb21wb25lbnQgIlNIQUNMIFZhbGlkYXRpb24iCiAgICAgICAgICAgIH0KICAgICAgICB9CiAgICBleHRvcHQxID0gc29mdHdhcmVTeXN0ZW0gIkV4dGVybmFsIE9wcG9ydHVuaXR5IFN5c3RlbSBBIiB7CiAgICAgICAgICAgIGRlc2NyaXB0aW9uICJFeHRlcm5hbCBzb3VyY2Ugb2Ygdm9sdW50ZWVyaW5nIG9wcG9ydHVuaXRpZXMiCiAgICAgICAgICAgIHRhZ3MgIm91dG9mc2NvcGUiCiAgICAgICAgfQoKICAgIGV4dG9wdDIgPSBzb2Z0d2FyZVN5c3RlbSAiRXh0ZXJuYWwgT3Bwb3J0dW5pdHkgU3lzdGVtIEIiIHsKICAgICAgICAgICAgZGVzY3JpcHRpb24gIkV4dGVybmFsIHNvdXJjZSBvZiB2b2x1bnRlZXJpbmcgb3Bwb3J0dW5pdGllcyIKICAgICAgICAgICAgdGFncyAib3V0b2ZzY29wZSIKICAgICAgICB9CiAgICAgICAgCiAgICAgICAgIyBSZWxhdGlvbnMKCiAgICAgICAgdm9sdW50ZWVyIC0+IGZyb250ZW5kICJTZWFyY2hlcyBhbmQgYXBwbGllcyBmb3Igb3Bwb3J0dW5pdGllcyIgSFRUUFMKICAgICAgICB2b2x1bnRlZXIgLT4gZXVkaSAiU3RvcmVzIGlkZW50aXR5IGFuZCBjZXJ0aWZpY2F0ZXMiCiAgICAgICAgdm9sdW50ZWVyIC0+IHNpZ25pbiAiQXV0aGVudGljYXRlcyBhbmQgYXV0aG9yaXplcyIgSFRUUFMKICAgICAgICB2b2x1bnRlZXIgLT4gbWFya2V0cGxhY2UgIlNlYXJjaGVzIGFuZCByZXF1ZXN0cyBvcHBvcnR1bml0aWVzIiBIVFRQUwogICAgICAgIHZvbHVudGVlciAtPiBjb21tdW5pdHkgIkNoYXRzIHdpdGggaW4gY29tbXVuaXR5IiBIVFRQUwogICAgICAgIGJhY2tlbmQgLT4gY29ubmVjdG9yICJDb25uZWN0cyB0byBmZWRlcmF0ZWQgY2F0YWxvZyBlbmRwb2ludCIKICAgICAgICBiYWNrZW5kIC0+IG1hcmtldHBsYWNlICJQcmVwYXJlcyBhbmQgcHJvdmlkZXMgbWV0YWRhdGEgZm9yIG9wcG9ydHVuaXRpZXMiCiAgICAgICAgc2lnbmluIC0+IGRhdGFiYXNlICJTZW5kcyBhbmQgc3RvcmVzIHJlZ2lzdHJhdGlvbiBkYXRhIG9mIHZvbHVudGVlcnMiCiAgICAgICAgbWFya2V0cGxhY2UgLT4gY29yZSAiRm9yd2FyZHMgcmVxdWVzdHMiCiAgICAgICAgY29yZSAtPiBtYXJrZXRwbGFjZSAiUHJvdmlkZXMgbWV0YWRhdGEgZm9yIG9wcG9ydHVuaXRpZXMiCiAgICAgICAgY29yZSAtPiBjb250cm9scGxhbmUgIlJlY2VpdmVzIGFuZCBmb3J3YXJkcyByZXF1ZXN0cyB0byBjb25uZWN0b3IiCiAgICAgICAgY29yZSAtPiBkYXRhcGxhbmUgIlJlY2VpdmVzIGFuZCBmb3J3YXJkcyByZXF1ZXN0ZWQgZGF0YSB0byBjb25uZWN0b3IiCiAgICAgICAgY29yZSAtPiBkYXRhYmFzZSAiRm9yd2FyZHMgcmVnaXN0cmF0aW9uIGRhdGEgb2Ygdm9sdW50ZWVycyBmb3IgcmVxdWVzdHMiCiAgICAgICAgbWluaXN0cnkgLT4gcmVwb3J0aW5nICJQZXJmb3JtcyBhbmQgdmlld3MgcmVwb3J0cyIKICAgICAgICBtaW5pc3RyeSAtPiBzaWduaW4gIkF1dGhlbnRpY2F0ZXMgYW5kIGF1dGhvcml6ZXMiIEhUVFBTCiAgICAgICAgbWluaXN0cnkgLT4gZGF0YWJhc2UgIlNlbmRzIGFuZCBzdG9yZXMgcmVnaXN0cmF0aW9uIGRhdGEgb2YgbWluaXN0cnkiCiAgICAgICAgY29ubmVjdG9yIC0+IGNvbm5lY3RvcjEgIkNyYXdscyBtZXRhZGF0YSIgRURDCiAgICAgICAgY29ubmVjdG9yIC0+IGNvbm5lY3RvcjIgIkNyYXdscyBtZXRhZGF0YSIgRURDCiAgICAgICAgY29ubmVjdG9yMSAtPiBkYXRhYmFzZTEgIkFjY2Vzc2VzIG9wcG9ydHVuaXRpZXMiCiAgICAgICAgY29ubmVjdG9yMiAtPiBkYXRhYmFzZTIgIkFjY2Vzc2VzIG9wcG9ydHVuaXRpZXMiCiAgICAgICAgY29ubmVjdG9yMSAtPiB3YWxsZXQxICJBY2Nlc3Mgb3JnYW5pc2F0aW9uYWwgY3JlZGVudGlhbHMiCiAgICAgICAgY29ubmVjdG9yMiAtPiB3YWxsZXQyICJBY2Nlc3Mgb3JnYW5pc2F0aW9uYWwgY3JlZGVudGlhbHMiCiAgICAgICAgY29ubmVjdG9yMSAtPiBnYWlheCAiUHJvdmVzIG9yZ2FuaXNhdGlvbmFsIGlkZW50aXR5LCBvYnRhaW5zIFZDcyIKICAgICAgICBjb25uZWN0b3IyIC0+IGdhaWF4ICJQcm92ZXMgb3JnYW5pc2F0aW9uYWwgaWRlbnRpdHksIG9idGFpbnMgVkNzIgogICAgICAgIHNlbWFudGljMSAtPiBkYXRhYmFzZTEgIlByb3ZpZGVzIHRyYW5zZm9ybWVkIGRhdGEiCgogICAgICAgIHNlbWFudGljMiAtPiBkYXRhYmFzZTIgIlByb3ZpZGVzIHRyYW5zZm9ybWVkIGRhdGEiCiAgICAgICAgc2VtYW50aWMxIC0+IGNvbm5lY3RvcjEgIlByb3ZpZGVzIEpTT04tTEQgYXNzZXRzIgogICAgICAgIHNlbWFudGljMiAtPiBjb25uZWN0b3IyICJQcm92aWRlcyBKU09OLUxEIGFzc2V0cyIKICAgICAgICBjb25uZWN0b3IxIC0+IGRhdGFiYXNlMSAiU3RvcmVzIHJlcXVlc3RzIGFuZCByZWdpc3RyYXRpb25zIG9mIHZvbHVudGVlcnMiCiAgICAgICAgY29ubmVjdG9yMiAtPiBkYXRhYmFzZTIgIlN0b3JlcyByZXF1ZXN0cyBhbmQgcmVnaXN0cmF0aW9ucyBvZiB2b2x1bnRlZXJzImJhY2tlbmQKICAgICAgICBiYWNrZW5kMSAtPiBkYXRhYmFzZTEgIlByb2Nlc3NlcyByZXF1ZXN0cyBhbmQgb3Bwb3J0dW5pdGllcyIKICAgICAgICBiYWNrZW5kMiAtPiBkYXRhYmFzZTIgIlByZXBhcmVzIHJlcXVlc3RzIGFuZCBvcHBvcnR1bml0aWVzIgogICAgICAgIGZyb250ZW5kMSAtPiBiYWNrZW5kMSAiU2hvd3MgcmVxdWVzdHMgYW5kIG9wcG9ydHVuaXRpZXMiCiAgICAgICAgZnJvbnRlbmQyIC0+IGJhY2tlbmQyICJTaG93cyByZXF1ZXN0cyBhbmQgb3Bwb3J0dW5pdGllcyIKICAgICAgICBiYWNrZW5kIC0+IGF1ZGl0ICJXcml0ZXMgYXVkaXQgZXZlbnRzIgogICAgICAgIG9udG9sb2d5X21hcDEgLT4gZXh0b3B0MSAiTWF0Y2hlcyBleHRlcm5hbCBvcHBvcnR1bml0aWVzIHRvIGRlZmluZWQgb250b2xvZ3kiCiAgICAgICAgb250b2xvZ3lfbWFwMiAtPiBleHRvcHQyICJNYXRjaGVzIGV4dGVybmFsIG9wcG9ydHVuaXRpZXMgdG8gZGVmaW5lZCBvbnRvbG9neSIKICAgICAgICBzaGFjbDEgLT4gb250b2xvZ3lfbWFwMSAiVmFsaWRhdGVzIHRyYW5zZm9ybWVkIG9wcG9ydHVuaXRpZXMgYWdhaW5zdCBkZWZpbmVkIG9udG9sb2d5IgogICAgICAgIHNoYWNsMiAtPiBvbnRvbG9neV9tYXAyICJWYWxpZGF0ZXMgdHJhbnNmb3JtZWQgb3Bwb3J0dW5pdGllcyBhZ2FpbnN0IGRlZmluZWQgb250b2xvZ3kiCiAgICAgICAgb250b2xvZ3lfbWFwMSAtPiBkYXRhYmFzZTEgIlN0b3JlcyB0cmFuc2Zvcm1lZCBvcHBvcnR1bml0aWVzIgogICAgICAgIG9udG9sb2d5X21hcDIgLT4gZGF0YWJhc2UyICJTdG9yZXMgdHJhbnNmb3JtZWQgb3Bwb3J0dW5pdGllcyIKICAgICAgICBvbnRvbG9neV9tYXAxIC0+IGVzY29fbWFwMSAiTWF0Y2hlcyB0cmFuc2Zvcm1lZCBvcHBvcnR1bml0aWVzIHRvIGRlZmluZWQgY29tcGV0ZW5jZXMiCiAgICAgICAgb250b2xvZ3lfbWFwMiAtPiBlc2NvX21hcDIgIk1hdGNoZXMgdHJhbnNmb3JtZWQgb3Bwb3J0dW5pdGllcyB0byBkZWZpbmVkIGNvbXBldGVuY2VzIgogICAgICAgIHNpZ25pbiAtPiBhdWRpdCAiV3JpdGVzIGF1dGhlbnRpY2F0aW9uIGV2ZW50cyIKICAgICAgICBlc2NvIC0+IGVzY29fbWFwMSAiUHJvdmlkZXMgc2tpbGwgYW5kIGNvbXBldGVuY2Ugdm9jYWJ1bGFyeSIKICAgICAgICBlc2NvIC0+IGVzY29fbWFwMiAiUHJvdmlkZXMgc2tpbGwgYW5kIGNvbXBldGVuY2Ugdm9jYWJ1bGFyeSIKICAgIH0KCiAgICB2aWV3cyB7CgogICAgICAgIHN5c3RlbUxhbmRzY2FwZSB2b2x1bnNwaGVyZSB7CiAgICAgICAgICAgIHRpdGxlICJWb2x1blNwaGVyZSBTeXN0ZW0gTGFuZHNjYXBlIgogICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICAgICAgYXV0b0xheW91dCB0YgogICAgICAgIH0KCiAgICAgICAgY29udGFpbmVyIHZvbHVuc3BoZXJlIHsKICAgICAgICAgICAgdGl0bGUgIlZvbHVuU3BoZXJlIFBsYXRmb3JtIENvbnRhaW5lcnMiCiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgICAgICBhdXRvTGF5b3V0IHRiCiAgICAgICAgfQoKICAgICAgICBjb250YWluZXIgb3JnMSB7CiAgICAgICAgICAgIHRpdGxlICJQYXJ0aWNpcGF0aW5nIE9yZ2FuaXphdGlvbiIKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgICAgIGF1dG9MYXlvdXQgdGIKICAgICAgICB9CgogICAgICAgIGNvbnRhaW5lciBvcmcyIHsKICAgICAgICAgICAgdGl0bGUgIlBhcnRpY2lwYXRpbmcgT3JnYW5pemF0aW9uIgogICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICAgICAgYXV0b0xheW91dCB0YgogICAgICAgIH0KCiAgICAgICAgY29tcG9uZW50IGZyb250ZW5kIHsKICAgICAgICAgICAgdGl0bGUgIlZvbHVuU3BoZXJlIEZyb250ZW5kIENvbXBvbmVudHMiCiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgICAgICBhdXRvTGF5b3V0IHRiCiAgICAgICAgfQoKICAgICAgICBjb21wb25lbnQgYmFja2VuZCB7CiAgICAgICAgICAgIHRpdGxlICJWb2x1blNwaGVyZSBCYWNrZW5kIENvbXBvbmVudHMiCiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgICAgICBhdXRvTGF5b3V0IHRiCiAgICAgICAgfQogICAgICAgICBjb21wb25lbnQgY29ubmVjdG9yIHsKICAgICAgICAgICAgdGl0bGUgIlZvbHVuU3BoZXJlIENvbm5lY3RvciBDb21wb25lbnRzIgogICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICAgICAgYXV0b0xheW91dCB0YgogICAgICAgICB9CiAgICAgICAgIGNvbXBvbmVudCBjb25uZWN0b3IxIHsKICAgICAgICAgICAgdGl0bGUgIlBhcnRpY2lwYXRpbmcgT3JnYW5pemF0aW9uIENvbm5lY3RvciBDb21wb25lbnRzIgogICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICAgICAgYXV0b0xheW91dCB0YgogICAgICAgICB9CiAgICAgICAgICAgIGNvbXBvbmVudCBjb25uZWN0b3IyIHsKICAgICAgICAgICAgICAgIHRpdGxlICJQYXJ0aWNpcGF0aW5nIE9yZ2FuaXphdGlvbiBDb25uZWN0b3IgQ29tcG9uZW50cyIKICAgICAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgICAgICAgICAgYXV0b0xheW91dCB0YgogICAgICAgICAgICB9CgogICAgICAgICAgICBjb21wb25lbnQgc2VtYW50aWMxIHsKICAgICAgICAgICAgICAgIHRpdGxlICJQYXJ0aWNpcGF0aW5nIE9yZ2FuaXphdGlvbiBTZW1hbnRpYyBMYXllciBDb21wb25lbnRzIgogICAgICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgICAgICAgICBhdXRvTGF5b3V0IHRiCiAgICAgICAgICAgIH0KICAgICAgICAgICAgY29tcG9uZW50IHNlbWFudGljMiB7CiAgICAgICAgICAgICAgICB0aXRsZSAiUGFydGljaXBhdGluZyBPcmdhbml6YXRpb24gU2VtYW50aWMgTGF5ZXIgQ29tcG9uZW50cyIKICAgICAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgICAgICAgICAgYXV0b0xheW91dCB0YgogICAgICAgICAgICB9CiAgICAgICAgICAgIGNvbXBvbmVudCBmcm9udGVuZDEgewogICAgICAgICAgICAgICAgdGl0bGUgIlBhcnRpY2lwYXRpbmcgT3JnYW5pemF0aW9uIEZyb250ZW5kIENvbXBvbmVudHMiCiAgICAgICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICAgICAgICAgIGF1dG9MYXlvdXQgdGIKICAgICAgICAgICAgfQogICAgICAgICAgICBjb21wb25lbnQgZnJvbnRlbmQyIHsKICAgICAgICAgICAgICAgIHRpdGxlICJQYXJ0aWNpcGF0aW5nIE9yZ2FuaXphdGlvbiBGcm9udGVuZCBDb21wb25lbnRzIgogICAgICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgICAgICAgICBhdXRvTGF5b3V0IHRiCiAgICAgICAgICAgIH0KICAgICAgICAgICAgY29tcG9uZW50IGJhY2tlbmQxIHsKICAgICAgICAgICAgICAgIHRpdGxlICJQYXJ0aWNpcGF0aW5nIE9yZ2FuaXphdGlvbiBCYWNrZW5kIENvbXBvbmVudHMiCiAgICAgICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICAgICAgICAgIGF1dG9MYXlvdXQgdGIKICAgICAgICAgICAgfQogICAgICAgICAgICBjb21wb25lbnQgYmFja2VuZDIgewogICAgICAgICAgICAgICAgdGl0bGUgIlBhcnRpY2lwYXRpbmcgT3JnYW5pemF0aW9uIEJhY2tlbmQgQ29tcG9uZW50cyIKICAgICAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgICAgICAgICAgYXV0b0xheW91dCB0YgogICAgICAgICAgICB9CiAgICAgICAgICAgIGNvbXBvbmVudCBkYXRhYmFzZTEgewogICAgICAgICAgICAgICAgdGl0bGUgIlBhcnRpY2lwYXRpbmcgT3JnYW5pemF0aW9uIERhdGFiYXNlIENvbXBvbmVudHMiCiAgICAgICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICAgICAgICAgIGF1dG9MYXlvdXQgdGIKICAgICAgICAgICAgfQogICAgICAgICAgICBjb21wb25lbnQgZGF0YWJhc2UyIHsKICAgICAgICAgICAgICAgIHRpdGxlICJQYXJ0aWNpcGF0aW5nIE9yZ2FuaXphdGlvbiBEYXRhYmFzZSBDb21wb25lbnRzIgogICAgICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgICAgICAgICBhdXRvTGF5b3V0IHRiCiAgICAgICAgICAgIH0KICAgICAgICAgICAgY29tcG9uZW50IHdhbGxldDEgewogICAgICAgICAgICAgICAgdGl0bGUgIlBhcnRpY2lwYXRpbmcgT3JnYW5pemF0aW9uIFdhbGxldCBDb21wb25lbnRzIgogICAgICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgICAgICAgICBhdXRvTGF5b3V0IHRiCiAgICAgICAgICAgIH0KICAgICAgICAgICAgY29tcG9uZW50IHdhbGxldDIgewogICAgICAgICAgICAgICAgdGl0bGUgIlBhcnRpY2lwYXRpbmcgT3JnYW5pemF0aW9uIFdhbGxldCBDb21wb25lbnRzIgogICAgICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgICAgICAgICBhdXRvTGF5b3V0IHRiCiAgICAgICAgICAgIH0KICAgICAgICAKICAgICAgICAKCiAgICAgICAgdGhlbWUgZGVmYXVsdAoKICAgICAgICBzdHlsZXMgewoKICAgICAgICAgICAgZWxlbWVudCAiUGVyc29uIiB7CiAgICAgICAgICAgICAgICBzaGFwZSBQZXJzb24KICAgICAgICAgICAgfQoKICAgICAgICAgICAgZWxlbWVudCAiUG9saWN5IiB7CiAgICAgICAgICAgICAgICBzaGFwZSBGb2xkZXIKICAgICAgICAgICAgICAgIGJhY2tncm91bmQgI0U0MDgwQQogICAgICAgICAgICB9CgogICAgICAgICAgICBlbGVtZW50ICJvdXRvZnNjb3BlIiB7CiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kICM5OTk5OTkKICAgICAgICAgICAgfQoKICAgICAgICAgICAgZWxlbWVudCAiV2ViIEFwcGxpY2F0aW9uIiB7CiAgICAgICAgICAgICAgICBzaGFwZSBXZWJCcm93c2VyCiAgICAgICAgICAgIH0KICAgICAgICB9CiAgICB9Cn0=",
     "structurizr.inspection.info" : "0",
     "structurizr.inspection.ignore" : "0",
     "structurizr.inspection.warning" : "0"
@@ -864,32 +1052,32 @@
       "externalContainerBoundariesVisible" : false,
       "generatedKey" : true,
       "key" : "Component-001",
-      "name" : "Component View: VolunSphere Platform - Web Frontend",
+      "name" : "Component View: Plattform Digitaler FWP - Web Frontend",
       "order" : 5,
       "relationships" : [ {
-        "id" : "101"
+        "id" : "111"
       }, {
-        "id" : "102"
-      }, {
-        "id" : "55"
-      }, {
-        "id" : "56"
-      }, {
-        "id" : "57"
+        "id" : "124"
       }, {
         "id" : "59"
       }, {
+        "id" : "60"
+      }, {
         "id" : "61"
       }, {
-        "id" : "64"
+        "id" : "63"
       }, {
-        "id" : "75"
+        "id" : "65"
       }, {
-        "id" : "76"
+        "id" : "68"
       }, {
         "id" : "79"
       }, {
         "id" : "80"
+      }, {
+        "id" : "83"
+      }, {
+        "id" : "84"
       } ],
       "title" : "VolunSphere Frontend Components"
     }, {
@@ -925,18 +1113,18 @@
       "externalContainerBoundariesVisible" : false,
       "generatedKey" : true,
       "key" : "Component-002",
-      "name" : "Component View: VolunSphere Platform - Backend Service",
+      "name" : "Component View: Plattform Digitaler FWP - Backend Service",
       "order" : 6,
       "relationships" : [ {
-        "id" : "62"
+        "id" : "66"
       }, {
-        "id" : "65"
+        "id" : "69"
       }, {
-        "id" : "68"
-      }, {
-        "id" : "70"
+        "id" : "72"
       }, {
         "id" : "74"
+      }, {
+        "id" : "78"
       } ],
       "title" : "VolunSphere Backend Components"
     }, {
@@ -964,12 +1152,12 @@
       "externalContainerBoundariesVisible" : false,
       "generatedKey" : true,
       "key" : "Component-003",
-      "name" : "Component View: VolunSphere Platform - EDC Connector",
+      "name" : "Component View: Plattform Digitaler FWP - EDC Connector",
       "order" : 7,
       "relationships" : [ {
-        "id" : "71"
+        "id" : "75"
       }, {
-        "id" : "73"
+        "id" : "77"
       } ],
       "title" : "VolunSphere Connector Components"
     }, {
@@ -1004,13 +1192,13 @@
         "rankSeparation" : 100,
         "vertices" : true
       },
-      "containerId" : "37",
+      "containerId" : "38",
       "elements" : [ {
-        "id" : "38",
+        "id" : "39",
         "x" : 0,
         "y" : 0
       }, {
-        "id" : "39",
+        "id" : "40",
         "x" : 0,
         "y" : 0
       } ],
@@ -1028,9 +1216,13 @@
         "rankSeparation" : 100,
         "vertices" : true
       },
-      "containerId" : "32",
+      "containerId" : "33",
       "elements" : [ {
-        "id" : "33",
+        "id" : "5",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "29",
         "x" : 0,
         "y" : 0
       }, {
@@ -1041,12 +1233,31 @@
         "id" : "35",
         "x" : 0,
         "y" : 0
+      }, {
+        "id" : "36",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "54",
+        "x" : 0,
+        "y" : 0
       } ],
       "externalContainerBoundariesVisible" : false,
       "generatedKey" : true,
       "key" : "Component-006",
       "name" : "Component View: Participating Organization A - Semantic Layer",
       "order" : 10,
+      "relationships" : [ {
+        "id" : "112"
+      }, {
+        "id" : "118"
+      }, {
+        "id" : "120"
+      }, {
+        "id" : "122"
+      }, {
+        "id" : "126"
+      } ],
       "title" : "Participating Organization Semantic Layer Components"
     }, {
       "automaticLayout" : {
@@ -1056,17 +1267,29 @@
         "rankSeparation" : 100,
         "vertices" : true
       },
-      "containerId" : "48",
+      "containerId" : "50",
       "elements" : [ {
-        "id" : "49",
+        "id" : "5",
         "x" : 0,
         "y" : 0
       }, {
-        "id" : "50",
+        "id" : "46",
         "x" : 0,
         "y" : 0
       }, {
         "id" : "51",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "52",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "53",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "55",
         "x" : 0,
         "y" : 0
       } ],
@@ -1075,6 +1298,17 @@
       "key" : "Component-007",
       "name" : "Component View: Participating Organization B - Semantic Layer",
       "order" : 11,
+      "relationships" : [ {
+        "id" : "115"
+      }, {
+        "id" : "119"
+      }, {
+        "id" : "121"
+      }, {
+        "id" : "123"
+      }, {
+        "id" : "129"
+      } ],
       "title" : "Participating Organization Semantic Layer Components"
     }, {
       "automaticLayout" : {
@@ -1093,6 +1327,10 @@
         "id" : "26",
         "x" : 0,
         "y" : 0
+      }, {
+        "id" : "27",
+        "x" : 0,
+        "y" : 0
       } ],
       "externalContainerBoundariesVisible" : false,
       "generatedKey" : true,
@@ -1108,13 +1346,17 @@
         "rankSeparation" : 100,
         "vertices" : true
       },
-      "containerId" : "40",
+      "containerId" : "41",
       "elements" : [ {
-        "id" : "41",
+        "id" : "42",
         "x" : 0,
         "y" : 0
       }, {
-        "id" : "42",
+        "id" : "43",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "44",
         "x" : 0,
         "y" : 0
       } ],
@@ -1132,11 +1374,11 @@
         "rankSeparation" : 100,
         "vertices" : true
       },
-      "containerId" : "27",
+      "containerId" : "28",
       "externalContainerBoundariesVisible" : false,
       "generatedKey" : true,
       "key" : "Component-010",
-      "name" : "Component View: Participating Organization A - Opportunity Management Service",
+      "name" : "Component View: Participating Organization A - Backend Service",
       "order" : 14,
       "title" : "Participating Organization Backend Components"
     }, {
@@ -1147,11 +1389,11 @@
         "rankSeparation" : 100,
         "vertices" : true
       },
-      "containerId" : "43",
+      "containerId" : "45",
       "externalContainerBoundariesVisible" : false,
       "generatedKey" : true,
       "key" : "Component-011",
-      "name" : "Component View: Participating Organization B - Opportunity Management Service",
+      "name" : "Component View: Participating Organization B - Backend Service",
       "order" : 15,
       "title" : "Participating Organization Backend Components"
     }, {
@@ -1162,7 +1404,7 @@
         "rankSeparation" : 100,
         "vertices" : true
       },
-      "containerId" : "28",
+      "containerId" : "29",
       "externalContainerBoundariesVisible" : false,
       "generatedKey" : true,
       "key" : "Component-012",
@@ -1177,7 +1419,7 @@
         "rankSeparation" : 100,
         "vertices" : true
       },
-      "containerId" : "44",
+      "containerId" : "46",
       "externalContainerBoundariesVisible" : false,
       "generatedKey" : true,
       "key" : "Component-013",
@@ -1192,13 +1434,13 @@
         "rankSeparation" : 100,
         "vertices" : true
       },
-      "containerId" : "29",
+      "containerId" : "30",
       "elements" : [ {
-        "id" : "30",
+        "id" : "31",
         "x" : 0,
         "y" : 0
       }, {
-        "id" : "31",
+        "id" : "32",
         "x" : 0,
         "y" : 0
       } ],
@@ -1216,13 +1458,13 @@
         "rankSeparation" : 100,
         "vertices" : true
       },
-      "containerId" : "45",
+      "containerId" : "47",
       "elements" : [ {
-        "id" : "46",
+        "id" : "48",
         "x" : 0,
         "y" : 0
       }, {
-        "id" : "47",
+        "id" : "49",
         "x" : 0,
         "y" : 0
       } ],
@@ -1295,39 +1537,39 @@
         "x" : 0,
         "y" : 0
       }, {
-        "id" : "36",
+        "id" : "37",
         "x" : 0,
         "y" : 0
       } ],
       "externalSoftwareSystemBoundariesVisible" : false,
       "generatedKey" : true,
       "key" : "Container-001",
-      "name" : "Container View: VolunSphere Platform",
+      "name" : "Container View: Plattform Digitaler FWP",
       "order" : 2,
       "relationships" : [ {
-        "id" : "101"
+        "id" : "111"
       }, {
-        "id" : "103"
+        "id" : "125"
       }, {
-        "id" : "52"
-      }, {
-        "id" : "58"
-      }, {
-        "id" : "60"
+        "id" : "56"
       }, {
         "id" : "62"
       }, {
+        "id" : "64"
+      }, {
         "id" : "66"
       }, {
-        "id" : "75"
+        "id" : "70"
       }, {
-        "id" : "77"
+        "id" : "79"
       }, {
-        "id" : "80"
+        "id" : "81"
       }, {
-        "id" : "82"
+        "id" : "84"
       }, {
         "id" : "86"
+      }, {
+        "id" : "90"
       } ],
       "softwareSystemId" : "6",
       "title" : "VolunSphere Platform Containers"
@@ -1344,6 +1586,10 @@
         "x" : 0,
         "y" : 0
       }, {
+        "id" : "5",
+        "x" : 0,
+        "y" : 0
+      }, {
         "id" : "6",
         "x" : 0,
         "y" : 0
@@ -1356,10 +1602,6 @@
         "x" : 0,
         "y" : 0
       }, {
-        "id" : "27",
-        "x" : 0,
-        "y" : 0
-      }, {
         "id" : "28",
         "x" : 0,
         "y" : 0
@@ -1368,7 +1610,15 @@
         "x" : 0,
         "y" : 0
       }, {
-        "id" : "32",
+        "id" : "30",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "33",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "54",
         "x" : 0,
         "y" : 0
       } ],
@@ -1378,17 +1628,27 @@
       "name" : "Container View: Participating Organization A",
       "order" : 3,
       "relationships" : [ {
-        "id" : "83"
+        "id" : "101"
       }, {
-        "id" : "89"
+        "id" : "103"
       }, {
-        "id" : "91"
+        "id" : "105"
+      }, {
+        "id" : "107"
+      }, {
+        "id" : "109"
+      }, {
+        "id" : "113"
+      }, {
+        "id" : "127"
+      }, {
+        "id" : "87"
       }, {
         "id" : "93"
       }, {
-        "id" : "97"
+        "id" : "95"
       }, {
-        "id" : "99"
+        "id" : "97"
       } ],
       "softwareSystemId" : "20",
       "title" : "Participating Organization"
@@ -1405,23 +1665,19 @@
         "x" : 0,
         "y" : 0
       }, {
+        "id" : "5",
+        "x" : 0,
+        "y" : 0
+      }, {
         "id" : "6",
         "x" : 0,
         "y" : 0
       }, {
-        "id" : "37",
+        "id" : "38",
         "x" : 0,
         "y" : 0
       }, {
-        "id" : "40",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "43",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "44",
+        "id" : "41",
         "x" : 0,
         "y" : 0
       }, {
@@ -1429,7 +1685,19 @@
         "x" : 0,
         "y" : 0
       }, {
-        "id" : "48",
+        "id" : "46",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "47",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "50",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "55",
         "x" : 0,
         "y" : 0
       } ],
@@ -1439,19 +1707,29 @@
       "name" : "Container View: Participating Organization B",
       "order" : 4,
       "relationships" : [ {
-        "id" : "100"
+        "id" : "102"
       }, {
-        "id" : "87"
+        "id" : "104"
       }, {
-        "id" : "90"
+        "id" : "106"
       }, {
-        "id" : "92"
+        "id" : "108"
       }, {
-        "id" : "95"
+        "id" : "110"
       }, {
-        "id" : "98"
+        "id" : "116"
+      }, {
+        "id" : "130"
+      }, {
+        "id" : "91"
+      }, {
+        "id" : "94"
+      }, {
+        "id" : "96"
+      }, {
+        "id" : "99"
       } ],
-      "softwareSystemId" : "36",
+      "softwareSystemId" : "37",
       "title" : "Participating Organization"
     } ],
     "systemLandscapeViews" : [ {
@@ -1491,7 +1769,15 @@
         "x" : 0,
         "y" : 0
       }, {
-        "id" : "36",
+        "id" : "37",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "54",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "55",
         "x" : 0,
         "y" : 0
       } ],
@@ -1500,19 +1786,27 @@
       "name" : "System Landscape View",
       "order" : 1,
       "relationships" : [ {
-        "id" : "53"
+        "id" : "100"
       }, {
-        "id" : "54"
+        "id" : "114"
       }, {
-        "id" : "78"
+        "id" : "117"
       }, {
-        "id" : "84"
+        "id" : "128"
+      }, {
+        "id" : "131"
+      }, {
+        "id" : "57"
+      }, {
+        "id" : "58"
+      }, {
+        "id" : "82"
       }, {
         "id" : "88"
       }, {
-        "id" : "94"
+        "id" : "92"
       }, {
-        "id" : "96"
+        "id" : "98"
       } ],
       "title" : "VolunSphere System Landscape"
     } ]
